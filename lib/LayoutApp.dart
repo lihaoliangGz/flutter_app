@@ -15,28 +15,30 @@ class LayoutApp extends StatelessWidget {
         children: <Widget>[
           new Expanded(
               child: new Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              new Container(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: new Text(
-                  'Oeschinen Lake Campground',
-                  style: new TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ),
-              new Text(
-                'Kandersteg, Switzerland',
-                style: new TextStyle(color: Colors.grey[500]),
-              )
-            ],
-          )),
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  new Container(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: new Text(
+                      'Oeschinen Lake Campground',
+                      style: new TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  new Text(
+                    'Kandersteg, Switzerland',
+                    style: new TextStyle(color: Colors.grey[500]),
+                  )
+                ],
+              )),
           new FavoriteWidget()
         ],
       ),
     );
 
     Column buildButtonColumn(IconData icon, String label) {
-      Color color = Theme.of(context).primaryColor;
+      Color color = Theme
+          .of(context)
+          .primaryColor;
       return new Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -103,7 +105,7 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
 //              ],
 //            )
 
-            ));
+        ));
   }
 }
 
@@ -191,12 +193,26 @@ class _TapboxAState extends State<TapboxA> {
   }
 }
 
-class TapboxB extends StatelessWidget{
+class TapboxB extends StatelessWidget {
+  TapboxB({Key key, this.active: false, @required this.onChanged})
+      : super(key: key);
+
+  final bool active;
+  final ValueChanged<bool> onChanged;
+
+  void _handleTap() {
+    onChanged(!active);
+  }
 
   @override
   Widget build(BuildContext context) {
+    return new GestureDetector(
+      onTap: _handleTap,
+      child: new Container(
+        child: new Center(
+          child: new Text(active?'Active':'Inactive'),
+        ),
+      ),
+    );
   }
-
-  TapboxB();
-
 }
