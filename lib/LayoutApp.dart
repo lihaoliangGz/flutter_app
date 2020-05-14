@@ -1,9 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+
+///在Flutter中构建布局
 
 class LayoutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    debugPaintSizeEnabled = false;
     Widget titleSection = new Container(
       padding: const EdgeInsets.all(32),
       child: new Row(
@@ -25,11 +30,7 @@ class LayoutApp extends StatelessWidget {
               )
             ],
           )),
-          new Icon(
-            Icons.star,
-            color: Colors.grey[500],
-          ),
-          new Text('41')
+          new FavoriteWidget()
         ],
       ),
     );
@@ -85,18 +86,117 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
             appBar: new AppBar(
               title: new Text("在Flutter中构建布局"),
             ),
-            body: new ListView(
-              children: <Widget>[
-                new Image.asset(
-                  'images/twice.jpg',
-                  width: 600,
-                  height: 200,
-                  fit: BoxFit.cover,
-                ),
-                titleSection,
-                buttonSection,
-                textSection,
-              ],
-            )));
+            body: new Center(
+              child: new TapboxA(),
+            )
+//            new ListView(
+//              children: <Widget>[
+//                new Image.asset(
+//                  'images/twice.jpg',
+//                  width: 600,
+//                  height: 200,
+//                  fit: BoxFit.cover,
+//                ),
+//                titleSection,
+//                buttonSection,
+//                textSection,
+//              ],
+//            )
+
+            ));
   }
+}
+
+class FavoriteWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new _FavoriteWidgetState();
+  }
+}
+
+class _FavoriteWidgetState extends State<FavoriteWidget> {
+  bool _isFavorited = true;
+  int _favoriteCount = 41;
+
+  void _toggleFavorite() {
+    setState(() {
+      if (_isFavorited) {
+        _favoriteCount -= 1;
+        _isFavorited = false;
+      } else {
+        _favoriteCount += 1;
+        _isFavorited = true;
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Row(
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        new Container(
+          padding: new EdgeInsets.all(0),
+          child: new IconButton(
+              icon: (_isFavorited
+                  ? new Icon(Icons.star)
+                  : new Icon(Icons.star_border)),
+              color: Colors.red[500],
+              onPressed: _toggleFavorite),
+        ),
+        new SizedBox(
+          width: 18,
+          child: new Container(
+            child: new Text("$_favoriteCount"),
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class TapboxA extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new _TapboxAState();
+  }
+}
+
+class _TapboxAState extends State<TapboxA> {
+  bool _active = false;
+
+  void _handleTap() {
+    setState(() {
+      _active = !_active;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new GestureDetector(
+      onTap: _handleTap,
+      child: new Container(
+        child: new Center(
+          child: new Text(
+            _active ? 'Active' : 'Inactive',
+            style: new TextStyle(fontSize: 32, color: Colors.white),
+          ),
+        ),
+        width: 200,
+        height: 200,
+        decoration: new BoxDecoration(
+            color: _active ? Colors.lightGreen[700] : Colors.grey[600]),
+      ),
+    );
+  }
+}
+
+class TapboxB extends StatelessWidget{
+
+  @override
+  Widget build(BuildContext context) {
+  }
+
+  TapboxB();
+
 }
