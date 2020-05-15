@@ -15,30 +15,28 @@ class LayoutApp extends StatelessWidget {
         children: <Widget>[
           new Expanded(
               child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  new Container(
-                    padding: const EdgeInsets.only(bottom: 8),
-                    child: new Text(
-                      'Oeschinen Lake Campground',
-                      style: new TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  new Text(
-                    'Kandersteg, Switzerland',
-                    style: new TextStyle(color: Colors.grey[500]),
-                  )
-                ],
-              )),
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              new Container(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: new Text(
+                  'Oeschinen Lake Campground',
+                  style: new TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ),
+              new Text(
+                'Kandersteg, Switzerland',
+                style: new TextStyle(color: Colors.grey[500]),
+              )
+            ],
+          )),
           new FavoriteWidget()
         ],
       ),
     );
 
     Column buildButtonColumn(IconData icon, String label) {
-      Color color = Theme
-          .of(context)
-          .primaryColor;
+      Color color = Theme.of(context).primaryColor;
       return new Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -89,23 +87,20 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
               title: new Text("在Flutter中构建布局"),
             ),
             body: new Center(
-              child: new TapboxA(),
-            )
-//            new ListView(
-//              children: <Widget>[
-//                new Image.asset(
-//                  'images/twice.jpg',
-//                  width: 600,
-//                  height: 200,
-//                  fit: BoxFit.cover,
-//                ),
-//                titleSection,
-//                buttonSection,
-//                textSection,
-//              ],
-//            )
-
-        ));
+              child: new ListView(
+                children: <Widget>[
+                  new Image.asset(
+                    'images/twice.jpg',
+                    width: 600,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  titleSection,
+                  buttonSection,
+                  textSection,
+                ],
+              ),
+            )));
   }
 }
 
@@ -153,66 +148,6 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
           ),
         )
       ],
-    );
-  }
-}
-
-class TapboxA extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return new _TapboxAState();
-  }
-}
-
-class _TapboxAState extends State<TapboxA> {
-  bool _active = false;
-
-  void _handleTap() {
-    setState(() {
-      _active = !_active;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new GestureDetector(
-      onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(
-            _active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32, color: Colors.white),
-          ),
-        ),
-        width: 200,
-        height: 200,
-        decoration: new BoxDecoration(
-            color: _active ? Colors.lightGreen[700] : Colors.grey[600]),
-      ),
-    );
-  }
-}
-
-class TapboxB extends StatelessWidget {
-  TapboxB({Key key, this.active: false, @required this.onChanged})
-      : super(key: key);
-
-  final bool active;
-  final ValueChanged<bool> onChanged;
-
-  void _handleTap() {
-    onChanged(!active);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new GestureDetector(
-      onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(active?'Active':'Inactive'),
-        ),
-      ),
     );
   }
 }
