@@ -62,7 +62,7 @@ class TutorialHome extends StatelessWidget {
         ],
       ),
       body: new Center(
-        child: new Counter(), //todo===========================
+        child: new Counter2(), //todo===========================
       ),
       floatingActionButton: new FloatingActionButton(
           child: new Icon(Icons.add), tooltip: 'Add', onPressed: null),
@@ -119,6 +119,62 @@ class CounterState extends State<Counter> {
           child: new Text("Increment"),
         ),
         new Text('Counter:$_counter')
+      ],
+    );
+  }
+}
+
+class CounterDisplay extends StatelessWidget {
+  CounterDisplay({this.counter});
+
+  final int counter;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Text("$counter");
+  }
+}
+
+class CounterIncrementor extends StatelessWidget {
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: onPressed,
+      child: new Text("Increment"),
+    );
+  }
+
+  CounterIncrementor({this.onPressed});
+}
+
+class Counter2 extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new _Counter2State();
+  }
+}
+
+class _Counter2State extends State<Counter2> {
+  int _counter = 0;
+
+  void _increment() {
+    setState(() {
+      ++_counter;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Row(
+      children: <Widget>[
+        new CounterIncrementor(
+          onPressed: _increment,
+        ),
+        new CounterDisplay(
+          counter: _counter,
+        )
       ],
     );
   }
