@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/CartApp.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutterapp/ListApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 
-void main() => runApp(new CartApp());
+void main() {
+  debugPaintSizeEnabled = false;
+  runApp(new WidgetFrameworkApp());
+}

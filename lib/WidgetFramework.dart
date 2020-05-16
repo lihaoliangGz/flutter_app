@@ -185,7 +185,7 @@ class WidgetFrameworkApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'My app',
-      home: new TutorialHome(),
+      home: new MyScaffold(),
     );
   }
 }
