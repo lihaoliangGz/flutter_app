@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 ///Flutter的布局方法
 
-class LayoutMethod extends StatelessWidget {
+class LayoutMethodApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Container(

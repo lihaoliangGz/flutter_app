@@ -184,7 +184,7 @@ class WidgetFrameworkApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'My app',
+      title: 'Flutter Widget框架概述',
       home: new MyScaffold(),
     );
   }

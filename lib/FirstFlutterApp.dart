@@ -2,7 +2,7 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 ///编写第一个flutter应用
-class FisterFlutterApp extends StatelessWidget {
+class FirstFlutterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //final wordPair = new WordPair.random();
