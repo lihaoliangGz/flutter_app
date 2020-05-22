@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutterapp/AnimationApp.dart';
 import 'package:flutterapp/CartApp.dart';
 import 'package:flutterapp/FirstFlutterApp.dart';
 import 'package:flutterapp/FontsFamilyApp.dart';
@@ -306,6 +307,24 @@ class WidgetFramework extends StatelessWidget {
   }
 }
 
+class Animation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new AnimationApp()),
+        );
+      },
+      child: Text('Flutter中的动画'),
+    );
+  }
+}
+
+
+
+//=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -364,6 +383,7 @@ class MainPage extends StatelessWidget {
         new CustomTheme(),
         new UrlLauncher(),
         new WidgetFramework(),
+        new Animation(),
         //===========footer============
         new DebugPaint()
       ],
