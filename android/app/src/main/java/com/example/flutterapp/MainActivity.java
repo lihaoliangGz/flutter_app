@@ -6,8 +6,9 @@ import android.content.IntentFilter;
 import android.os.BatteryManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
+
+import androidx.annotation.NonNull;
 
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.MethodCall;

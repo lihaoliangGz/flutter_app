@@ -20,6 +20,7 @@ import 'package:flutterapp/TextInputApp.dart';
 import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
+import 'package:flutterapp/WidgetLayout.dart';
 
 class FirstFlutter extends StatelessWidget {
   @override
@@ -322,6 +323,21 @@ class Animation extends StatelessWidget {
   }
 }
 
+class WidgetLayout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new WidgetLayoutApp()),
+        );
+      },
+      child: Text('Flutter所提供的所有布局'),
+    );
+  }
+}
+
 
 
 //=================== footer =======================
@@ -384,6 +400,7 @@ class MainPage extends StatelessWidget {
         new UrlLauncher(),
         new WidgetFramework(),
         new Animation(),
+        new WidgetLayout(),
         //===========footer============
         new DebugPaint()
       ],

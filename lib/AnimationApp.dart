@@ -195,6 +195,10 @@ class AnimationApp extends StatelessWidget {
         ),
         body: new ListView(
           children: <Widget>[
+            new Container(
+              child: Text("https://flutterchina.club/animations/"),
+              padding: new EdgeInsets.symmetric(vertical: 10),
+            ),
             new RaisedButton(
               onPressed: () {
                 Navigator.of(context)
