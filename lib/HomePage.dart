@@ -20,7 +20,9 @@ import 'package:flutterapp/TextInputApp.dart';
 import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
-import 'package:flutterapp/WidgetLayout.dart';
+import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/widget_layout/WidgetLayout.dart';
+
+import 'TabBarApp.dart';
 
 class FirstFlutter extends StatelessWidget {
   @override
@@ -338,7 +340,20 @@ class WidgetLayout extends StatelessWidget {
   }
 }
 
-
+class TabBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new TabBarApp()),
+        );
+      },
+      child: Text('TabBar'),
+    );
+  }
+}
 
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
@@ -401,6 +416,7 @@ class MainPage extends StatelessWidget {
         new WidgetFramework(),
         new Animation(),
         new WidgetLayout(),
+        new TabBar(),
         //===========footer============
         new DebugPaint()
       ],
