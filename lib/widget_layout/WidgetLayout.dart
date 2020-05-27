@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'StackDemo.dart';
+import 'package:flutterapp/widget_layout/AlignDemo.dart';
+import 'package:flutterapp/widget_layout/AspectRatioDemo.dart';
+import 'package:flutterapp/widget_layout/CenterDemo.dart';
+import 'package:flutterapp/widget_layout/FittedBoxDemo.dart';
+
 import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/widget_layout/ContainerDemo.dart';
 import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/widget_layout/PaddingDemo.dart';
+
+import 'StackDemo.dart';
 
 class WidgetLayoutApp extends StatelessWidget {
   @override
@@ -34,6 +40,42 @@ class WidgetLayoutApp extends StatelessWidget {
                   Navigator.of(context)
                       .push(new MaterialPageRoute(builder: (context) {
                     return new PaddingDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("Center"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new CenterDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("Align"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new AlignDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("FittedBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new FittedBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("AspectRatio"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new AspectRatioDemo();
                   }));
                 },
               ),
