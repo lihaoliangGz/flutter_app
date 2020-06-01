@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 class ContainerDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    DateTime time = DateTime.now();
+    print("日 ${time.day}");
+    print("月 ${time.month}");
+    print("年 ${time.year} local=${time.toLocal().toString()}");
+
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(

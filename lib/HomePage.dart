@@ -20,7 +20,8 @@ import 'package:flutterapp/TextInputApp.dart';
 import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
-import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/widget_layout/WidgetLayout.dart';
+import 'package:flutterapp/dart/dart_app.dart';
+import 'package:flutterapp/widget_layout/WidgetLayout.dart';
 
 import 'TabBarApp.dart';
 
@@ -35,6 +36,21 @@ class FirstFlutter extends StatelessWidget {
         );
       },
       child: Text("编写您的第一个 Flutter App"),
+    );
+  }
+}
+
+class DartDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new DartApp()),
+        );
+      },
+      child: Text("Dart"),
     );
   }
 }
@@ -396,6 +412,7 @@ class MainPage extends StatelessWidget {
     return new ListView(
       children: <Widget>[
         new FirstFlutter(),
+        DartDemo(),
         new Cart(),
         new FontsFamily(),
         new Gesture(),
