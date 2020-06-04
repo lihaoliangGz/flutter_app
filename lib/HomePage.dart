@@ -21,6 +21,7 @@ import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
+import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
 
 import 'TabBarApp.dart';
@@ -371,6 +372,21 @@ class TabBar extends StatelessWidget {
   }
 }
 
+class Svg extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new SvgApp()),
+        );
+      },
+      child: Text('Svg'),
+    );
+  }
+}
+
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
@@ -434,6 +450,7 @@ class MainPage extends StatelessWidget {
         new Animation(),
         new WidgetLayout(),
         new TabBar(),
+        new Svg(),
         //===========footer============
         new DebugPaint()
       ],

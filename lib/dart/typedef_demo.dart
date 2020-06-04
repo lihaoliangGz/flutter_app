@@ -10,6 +10,8 @@ class TypedefDemo extends BaseStatelessApp {
     assert(coll.compare is Function);
     assert(coll.compare2 is Compare);
 
+
+
     return Center(
       child: Text("Typedefs"),
     );
