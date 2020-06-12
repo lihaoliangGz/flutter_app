@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/temp/refresh_demo.dart';
+import 'package:flutterapp/temp/temp_demo.dart';
 
 class TempApp extends StatelessWidget {
   @override
@@ -12,6 +13,15 @@ class TempApp extends StatelessWidget {
         body: ListView(
           children: <Widget>[
             ListTile(
+              title: Text("temp"),
+              onTap: () {
+                Navigator.of(context)
+                    .push(new MaterialPageRoute(builder: (context) {
+                  return TempDemo();
+                }));
+              },
+            ),
+            ListTile(
               title: Text("刷新"),
               onTap: () {
                 Navigator.of(context)
@@ -19,7 +29,7 @@ class TempApp extends StatelessWidget {
                   return RefreshDemo();
                 }));
               },
-            )
+            ),
           ],
         ),
       ),

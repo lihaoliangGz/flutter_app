@@ -21,9 +21,11 @@ import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
+import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/svg_app.dart';
-import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/temp/temp_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
+
+import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/temp/temp_app.dart';
 
 import 'TabBarApp.dart';
 
@@ -403,6 +405,21 @@ class Temp extends StatelessWidget {
   }
 }
 
+class Debug extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new DebugApp()),
+        );
+      },
+      child: Text('调试 Flutter Apps'),
+    );
+  }
+}
+
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
@@ -468,6 +485,7 @@ class MainPage extends StatelessWidget {
         new TabBar(),
         new Svg(),
         new Temp(),
+        new Debug(),
         //===========footer============
         new DebugPaint()
       ],
