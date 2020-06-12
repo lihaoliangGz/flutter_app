@@ -22,6 +22,7 @@ import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/for_android/flutter_for_android.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
 
@@ -420,6 +421,21 @@ class Debug extends StatelessWidget {
   }
 }
 
+class ForAndroid extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new FlutterForAndroid()),
+        );
+      },
+      child: Text('Flutter For Android'),
+    );
+  }
+}
+
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
@@ -486,6 +502,7 @@ class MainPage extends StatelessWidget {
         new Svg(),
         new Temp(),
         new Debug(),
+        new ForAndroid(),
         //===========footer============
         new DebugPaint()
       ],
