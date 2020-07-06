@@ -22,7 +22,7 @@ import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
-import 'package:flutterapp/for_android/flutter_for_android.dart';
+import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
 
@@ -428,10 +428,25 @@ class ForAndroid extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new FlutterForAndroid()),
+          new MaterialPageRoute(builder: (context) => new FlutterPlugin()),
         );
       },
       child: Text('Flutter For Android'),
+    );
+  }
+}
+
+class FlutterPlugin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => FlutterPluginDemo()),
+        );
+      },
+      child: Text('Flutter 插件'),
     );
   }
 }
@@ -503,6 +518,7 @@ class MainPage extends StatelessWidget {
         new Temp(),
         new Debug(),
         new ForAndroid(),
+        FlutterPlugin(),
         //===========footer============
         new DebugPaint()
       ],
