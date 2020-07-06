@@ -6,7 +6,16 @@ import 'package:flutterapp/widget_layout/ContainerDemo.dart';
 import 'package:flutterapp/widget_layout/FittedBoxDemo.dart';
 import 'package:flutterapp/widget_layout/PaddingDemo.dart';
 import 'package:flutterapp/widget_layout/StackDemo.dart';
+import 'package:flutterapp/widget_layout/baseline_demo.dart';
+import 'package:flutterapp/widget_layout/constrained_box_demo.dart';
+import 'package:flutterapp/widget_layout/intrinsic_height_demo.dart';
+import 'package:flutterapp/widget_layout/limited_box_demo.dart';
 import 'package:flutterapp/widget_layout/listview_demo.dart';
+import 'package:flutterapp/widget_layout/offstage_demo.dart';
+import 'package:flutterapp/widget_layout/overflow_box_demo.dart';
+import 'package:flutterapp/widget_layout/sized_box_demo.dart';
+import 'package:flutterapp/widget_layout/sized_overflow_box_demo.dart';
+import 'package:flutterapp/widget_layout/transform_demo.dart';
 
 class WidgetLayoutApp extends StatelessWidget {
   @override
@@ -75,6 +84,87 @@ class WidgetLayoutApp extends StatelessWidget {
                   Navigator.of(context)
                       .push(new MaterialPageRoute(builder: (context) {
                     return new AspectRatioDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("ConstrainedBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new ConstrainedBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("baseline"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new BaselineDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("IntrinsicHeight"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new IntrinsicHeightDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("LimitedBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new LimitedBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("Offstage"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new OffStageDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("OverflowBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new OverflowBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("SizedBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new SizedBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("SizedOverflowBox"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new SizedOverflowBoxDemo();
+                  }));
+                },
+              ),
+              new ListTile(
+                title: new Text("Transform"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return new TransformDemo();
                   }));
                 },
               ),
