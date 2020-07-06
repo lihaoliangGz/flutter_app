@@ -25,6 +25,7 @@ import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
+import 'package:flutterapp/widget_menu/widgets_menu.dart';
 
 import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/temp/temp_app.dart';
 
@@ -451,6 +452,21 @@ class FlutterPlugin extends StatelessWidget {
   }
 }
 
+class Widgets extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => WidgetsMenu()),
+        );
+      },
+      child: Text('Widgets 目录'),
+    );
+  }
+}
+
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
@@ -519,6 +535,7 @@ class MainPage extends StatelessWidget {
         new Debug(),
         new ForAndroid(),
         FlutterPlugin(),
+        Widgets(),
         //===========footer============
         new DebugPaint()
       ],
