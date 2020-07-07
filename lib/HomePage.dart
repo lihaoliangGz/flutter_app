@@ -21,7 +21,13 @@ import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
+import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/plugin/flutter_plugin.dart';
+import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
+import 'package:flutterapp/widget_menu/widgets_menu.dart';
+
+import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/temp/temp_app.dart';
 
 import 'TabBarApp.dart';
 
@@ -371,6 +377,96 @@ class TabBar extends StatelessWidget {
   }
 }
 
+class Svg extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new SvgApp()),
+        );
+      },
+      child: Text('Svg'),
+    );
+  }
+}
+
+class Temp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new TempApp()),
+        );
+      },
+      child: Text('Temp'),
+    );
+  }
+}
+
+class Debug extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new DebugApp()),
+        );
+      },
+      child: Text('调试 Flutter Apps'),
+    );
+  }
+}
+
+class ForAndroid extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => new FlutterPlugin()),
+        );
+      },
+      child: Text('Flutter For Android'),
+    );
+  }
+}
+
+class FlutterPlugin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => FlutterPluginDemo()),
+        );
+      },
+      child: Text('Flutter 插件'),
+    );
+  }
+}
+
+class Widgets extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => WidgetsMenu()),
+        );
+      },
+      child: Text('Widgets 目录'),
+    );
+  }
+}
+
 //=================== footer =======================
 class DebugPaint extends StatefulWidget {
   @override
@@ -434,6 +530,12 @@ class MainPage extends StatelessWidget {
         new Animation(),
         new WidgetLayout(),
         new TabBar(),
+        new Svg(),
+        new Temp(),
+        new Debug(),
+        new ForAndroid(),
+        FlutterPlugin(),
+        Widgets(),
         //===========footer============
         new DebugPaint()
       ],
