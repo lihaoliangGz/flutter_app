@@ -22,6 +22,7 @@ import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
@@ -452,6 +453,21 @@ class FlutterPlugin extends StatelessWidget {
   }
 }
 
+class Other extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          new MaterialPageRoute(builder: (context) => OtherDemo()),
+        );
+      },
+      child: Text("其他"),
+    );
+  }
+}
+
 class Widgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -536,6 +552,7 @@ class MainPage extends StatelessWidget {
         new ForAndroid(),
         FlutterPlugin(),
         Widgets(),
+        Other(),
         //===========footer============
         new DebugPaint()
       ],
