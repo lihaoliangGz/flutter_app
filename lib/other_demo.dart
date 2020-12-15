@@ -5,6 +5,15 @@ import 'package:flutterapp/base/BaseStatelessApp.dart';
 class OtherDemo extends BaseStatelessApp {
   @override
   Widget getBody() {
+    Future<void> f = printWithDelay("Async");
+    f.then((value) {
+      print("f.then执行");
+    });
+    f.whenComplete(() {
+      print("When Complete执行");
+    });
+    printWithDelay2("Async");
+
     return NotificationListener(
       onNotification: (ScrollNotification note) {
         print("滚动的位置: ${note.metrics.pixels.toInt()}"); // 滚动位置。
@@ -18,6 +27,17 @@ class OtherDemo extends BaseStatelessApp {
         ],
       ),
     );
+  }
+
+  Future<void> printWithDelay(String msg) async {
+    await Future.delayed(Duration(seconds: 5));
+    print("msg=${msg}");
+  }
+
+  Future<void> printWithDelay2(String msg) {
+    return Future.delayed(Duration(seconds: 5)).then((value) {
+      print("msg2=${msg}");
+    });
   }
 
   @override
