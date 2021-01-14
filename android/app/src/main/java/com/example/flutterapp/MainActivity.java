@@ -21,7 +21,6 @@ public class MainActivity extends FlutterActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        GeneratedPluginRegistrant.registerWith(this);
 
         new MethodChannel(getFlutterView(), CHANNEL).setMethodCallHandler(new MethodChannel.MethodCallHandler() {
             @Override
@@ -33,8 +32,8 @@ public class MainActivity extends FlutterActivity {
                     } else {
                         result.error("UNAVAILABLE", "Battery level not available.", null);
                     }
-                }else{
-                  result.notImplemented();
+                } else {
+                    result.notImplemented();
                 }
             }
         });
