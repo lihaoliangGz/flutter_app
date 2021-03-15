@@ -25,10 +25,9 @@ import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/svg_app.dart';
+import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/widget_layout/WidgetLayout.dart';
 import 'package:flutterapp/widget_menu/widgets_menu.dart';
-
-import 'file:///C:/Users/Administrator/Desktop/flutter_app/lib/temp/temp_app.dart';
 
 import 'TabBarApp.dart';
 
