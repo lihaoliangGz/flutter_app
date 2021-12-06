@@ -109,7 +109,7 @@ class MultiListViewDemo extends StatelessWidget {
           return new ListTile(
             title: new Text(
               item.heading,
-              style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline1,
             ),
           );
         } else if (item is MessageItem) {
@@ -133,7 +133,7 @@ class GridViewDemo extends StatelessWidget {
         return new Center(
           child: new Text(
             "item $index",
-            style: Theme.of(context).textTheme.headline,
+            style: Theme.of(context).textTheme.headline1,
           ),
         );
       }),

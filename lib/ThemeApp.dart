@@ -16,7 +16,7 @@ class MyHomePage extends StatelessWidget {
           color: Theme.of(context).accentColor,
           child: new Text(
             'Text with a background color',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.subtitle1,
           ),
         ),
       ),
