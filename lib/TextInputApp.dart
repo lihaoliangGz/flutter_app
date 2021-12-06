@@ -26,10 +26,12 @@ class ExampleWidgetState extends State<ExampleWidget> {
           onPressed: () {
             showDialog(
                 context: context,
-                child: new AlertDialog(
-                  title: new Text("What you typed"),
-                  content: new Text(_controller.text),
-                ));
+                builder: (BuildContext context) {
+                  new AlertDialog(
+                    title: new Text("What you typed"),
+                    content: new Text(_controller.text),
+                  );
+                });
           },
           child: new Text("Done"),
         )

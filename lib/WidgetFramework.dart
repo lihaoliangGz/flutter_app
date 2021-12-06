@@ -35,7 +35,7 @@ class MyScaffold extends StatelessWidget {
         children: <Widget>[
           new MyAppBar(new Text(
             'Example title',
-            style: Theme.of(context).primaryTextTheme.title,
+            style: Theme.of(context).primaryTextTheme.subtitle1,
           )),
           new Expanded(
               child: new Center(
