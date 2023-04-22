@@ -11,7 +11,11 @@ class Post {
   final String title;
   final String body;
 
-  Post({this.userId, this.id, this.title, this.body});
+  Post(
+      {required this.userId,
+      required this.id,
+      required this.title,
+      required this.body});
 
   factory Post.fromJson(Map<String, dynamic> json) {
     return new Post(
@@ -45,7 +49,7 @@ class NetworkApp extends StatelessWidget {
             future: fetchPost(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return new Text(snapshot.data.title);
+                return new Text(snapshot.data?.title ?? "");
               } else if (snapshot.hasError) {
                 return new Text("${snapshot.error}");
               }

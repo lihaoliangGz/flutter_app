@@ -17,6 +17,7 @@ class OtherDemo extends BaseStatelessApp {
     return NotificationListener(
       onNotification: (ScrollNotification note) {
         print("滚动的位置: ${note.metrics.pixels.toInt()}"); // 滚动位置。
+        return true;
       },
       child: ListView(
         children: <Widget>[

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatelessWidget {
   final String title;
 
-  MyHomePage({Key key, @required this.title}) : super(key: key);
+  MyHomePage({required this.title}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ import 'package:path_provider/path_provider.dart';
 const String title = "读写文件";
 
 class Demo extends StatefulWidget {
-  Demo({Key key}) : super(key: key);
+  Demo() : super();
 
   @override
   State<StatefulWidget> createState() {
@@ -15,7 +15,7 @@ class Demo extends StatefulWidget {
 }
 
 class _DemoState extends State<Demo> {
-  int _counter;
+  late int _counter;
 
   @override
   void initState() {

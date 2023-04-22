@@ -125,7 +125,7 @@ class CounterState extends State<Counter> {
 }
 
 class CounterDisplay extends StatelessWidget {
-  CounterDisplay({this.counter});
+  CounterDisplay({required this.counter});
 
   final int counter;
 
@@ -146,7 +146,7 @@ class CounterIncrementor extends StatelessWidget {
     );
   }
 
-  CounterIncrementor({this.onPressed});
+  CounterIncrementor({required this.onPressed});
 }
 
 class Counter2 extends StatefulWidget {

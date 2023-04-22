@@ -26,11 +26,11 @@ class CustomRefreshWidget extends StatefulWidget {
   String loadStr;
 
   CustomRefreshWidget({
-    this.child,
+    required this.child,
     this.state = LoadState.State_Default,
-    this.onLoading,
-    this.onRefresh,
-    this.controller,
+    required this.onLoading,
+    required this.onRefresh,
+    required this.controller,
     this.enablePullUp = true,
     this.enablePullDown = true,
     this.loadIcon = "images/def_icon_load_nodata.png",

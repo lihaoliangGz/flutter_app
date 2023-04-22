@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 ///状态管理
 
@@ -65,7 +64,7 @@ class _ParentWidgetState extends State<ParentWidget> {
 
 //-----tapboxB------
 class TapboxB extends StatelessWidget {
-  TapboxB({Key key, this.active: false, @required this.onChanged})
+  TapboxB({required Key key, this.active: false, required this.onChanged})
       : super(key: key);
 
   final bool active;
@@ -97,7 +96,7 @@ class TapboxB extends StatelessWidget {
 
 //-----tapboxC-----
 class TapboxC extends StatefulWidget {
-  TapboxC({Key key, this.active, this.onChanged}) : super(key: key);
+  TapboxC({required this.active, required this.onChanged}) : super();
 
   final bool active;
   final ValueChanged<bool> onChanged;
@@ -153,7 +152,7 @@ class TapboxCState extends State<TapboxC> {
           color: widget.active ? Colors.lightGreen[700] : Colors.grey[600],
           border: _highlight
               ? new Border.all(
-                  color: Colors.teal[700],
+                  color: Color(0xFF00796B),
                   width: 10.0,
                 )
               : null,
@@ -164,13 +163,10 @@ class TapboxCState extends State<TapboxC> {
 }
 
 class Point {
-  num x, y;
+  late num x, y;
 
   //Point(this.x, this.y);
-  Point(num x, num y) {
-    this.x = x;
-    this.y = y;
-  }
+  Point(this.x, this.y) {}
 
   Point.origin() {
     this.x = 0;

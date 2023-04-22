@@ -9,8 +9,8 @@ class LogoApp extends StatefulWidget {
 }
 
 class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
 
   @override
   void initState() {
@@ -68,7 +68,7 @@ class GrowTransition extends StatelessWidget {
   final Widget child;
   final Animation<double> animation;
 
-  GrowTransition({this.child, this.animation});
+  GrowTransition({required this.child, required this.animation});
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class GrowTransition extends StatelessWidget {
       child: new Center(
           child: new AnimatedBuilder(
         animation: animation,
-        builder: (BuildContext context, Widget child) {
+        builder: (BuildContext context, Widget? child) {
           return new Container(
             height: animation.value,
             width: animation.value,
@@ -97,8 +97,8 @@ class LogoApp2 extends StatefulWidget {
 }
 
 class _LogoAppState2 extends State<LogoApp2> with TickerProviderStateMixin {
-  Animation animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
 
   initState() {
     super.initState();
@@ -126,22 +126,23 @@ class AnimatedLogo extends AnimatedWidget {
   static final _opacityTween = new Tween<double>(begin: 0.1, end: 1.0);
   static final _sizeTween = new Tween<double>(begin: 0.0, end: 300.0);
 
-  AnimatedLogo({Key key, Animation<double> animation})
-      : super(key: key, listenable: animation);
+  AnimatedLogo({required Animation<double> animation})
+      : super(listenable: animation);
 
   Widget build(BuildContext context) {
-    final Animation<double> animation = listenable;
+    //TODO
+    // final Animation<double> animation = listenable;
     return new Material(
       child: new Center(
-        child: new Opacity(
-          opacity: _opacityTween.evaluate(animation),
-          child: new Container(
-            margin: new EdgeInsets.symmetric(vertical: 10.0),
-            height: _sizeTween.evaluate(animation),
-            width: _sizeTween.evaluate(animation),
-            child: new FlutterLogo(),
-          ),
-        ),
+        // child: new Opacity(
+        //   opacity: _opacityTween.evaluate(animation),
+        //   child: new Container(
+        //     margin: new EdgeInsets.symmetric(vertical: 10.0),
+        //     height: _sizeTween.evaluate(animation),
+        //     width: _sizeTween.evaluate(animation),
+        //     child: new FlutterLogo(),
+        //   ),
+        // ),
       ),
     );
   }
@@ -155,8 +156,8 @@ class LogoApp3 extends StatefulWidget {
 }
 
 class _LogoAppState3 extends State<LogoApp3> with TickerProviderStateMixin {
-  AnimationController controller;
-  Animation<double> animation;
+  late AnimationController controller;
+  late Animation<double> animation;
 
   initState() {
     super.initState();
@@ -199,7 +200,7 @@ class AnimationApp extends StatelessWidget {
               child: Text("https://flutterchina.club/animations/"),
               padding: new EdgeInsets.symmetric(vertical: 10),
             ),
-            new ElevatedButton (
+            new ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
@@ -208,7 +209,7 @@ class AnimationApp extends StatelessWidget {
               },
               child: Text("动画示例-Logo"),
             ),
-            new ElevatedButton (
+            new ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
@@ -217,7 +218,7 @@ class AnimationApp extends StatelessWidget {
               },
               child: Text('用AnimatedBuilder重构'),
             ),
-            new ElevatedButton (
+            new ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {

@@ -9,7 +9,7 @@ class ActivityLifecycle extends StatefulWidget {
 
 class _ActivityLifecycleState extends State<ActivityLifecycle>
     with WidgetsBindingObserver {
-  AppLifecycleState _lastLifecycleState;
+  late AppLifecycleState _lastLifecycleState;
 
   @override
   void initState() {

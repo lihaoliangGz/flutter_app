@@ -456,7 +456,7 @@ class FlutterPlugin extends StatelessWidget {
 class Permission extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,

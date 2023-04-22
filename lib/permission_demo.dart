@@ -7,7 +7,9 @@ class PermissionDemo extends BaseStatelessApp {
   @override
   Widget getBody() {
     return NotificationListener(
-      onNotification: (ScrollNotification note) {},
+      onNotification: (ScrollNotification note) {
+        return true;
+      },
       child: ListView(
         children: <Widget>[
           Container(

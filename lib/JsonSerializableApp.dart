@@ -19,10 +19,11 @@ class MyPage extends StatelessWidget {
 
     String strJson = '{"name": "John Smith","email": "john@example.com"}';
     Map userMap = json.decode(strJson);
-    var user = new User.fromJson(userMap);
-    print("user.name = ${user.name} , user.email = ${user.email}");
-    String strEncode = json.encode(user);
-    print("strEncode = $strEncode");
+    //TODO
+    //var user = new User.fromJson(userMap);
+    // print("user.name = ${user.name} , user.email = ${user.email}");
+    // String strEncode = json.encode(user);
+    // print("strEncode = $strEncode");
   }
 
   @override

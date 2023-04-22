@@ -15,7 +15,7 @@ class TabBarApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({required this.title}) : super();
   final String title;
 
   @override
@@ -25,10 +25,10 @@ class MyHomePage extends StatefulWidget {
 // 如果想使用asset 目录下的图标，那么需要自定义TabController 而自定义TabController 则需要with SingleTickerProviderStateMixin，并且实现 initState()  dispose() 方法
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  late TabController _tabController;
   var _currentIndex = 0;
-  List<Tab> list1 = new List();
-  List<Widget> list2 = new List();
+  List<Tab> list1 = [];
+  List<Widget> list2 = [];
   var tabTitle = ['首页', '分类', '购物车', '我的'];
   var tabIcon = [
     Icon(Icons.home),
@@ -138,7 +138,8 @@ class _MyHomePageState extends State<MyHomePage>
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        bottom: _getTabBar(_currentIndex),
+        //TODO
+        //bottom: _getTabBar(_currentIndex),
       ),
       body: TabBarView(controller: _tabController, children: <Widget>[
         Center(child: Text(tabTitle[0])),

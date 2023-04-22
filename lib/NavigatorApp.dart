@@ -82,7 +82,7 @@ class TodosScreen extends StatelessWidget {
 class DetailScreen extends StatelessWidget {
   final Todo todo;
 
-  DetailScreen({Key key, @required this.todo}) : super(key: key);
+  DetailScreen({required this.todo}) : super();
 
   @override
   Widget build(BuildContext context) {

@@ -11,13 +11,13 @@ class ImagePickerDemo extends StatefulWidget {
 }
 
 class _ImagePickerDemoState extends State<ImagePickerDemo> {
-  File _image;
+  late File _image;
   final picker = ImagePicker();
 
   Future getImage() async {
     final pickedFile = await picker.getImage(source: ImageSource.gallery);
     setState(() {
-      _image = File(pickedFile.path);
+      _image = File(pickedFile?.path ?? "");
     });
   }
 
