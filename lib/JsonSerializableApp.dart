@@ -32,7 +32,7 @@ class MyPage extends StatelessWidget {
         title: new Text(title),
       ),
       body: new Center(
-        child: new RaisedButton(
+        child: new ElevatedButton(
           onPressed: _decode,
           child: new Text('json'),
         ),

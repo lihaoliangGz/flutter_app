@@ -72,7 +72,7 @@ class _DemoState extends State<Demo> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           new Text('Button tapped $_counter time${_counter == 1 ? '' : 's'}'),
-          new RaisedButton(
+          new ElevatedButton (
             onPressed: _reduceCounter,
             child: new Text("reduce"),
           )

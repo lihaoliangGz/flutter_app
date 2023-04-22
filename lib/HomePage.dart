@@ -35,7 +35,7 @@ import 'TabBarApp.dart';
 class FirstFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -50,7 +50,7 @@ class FirstFlutter extends StatelessWidget {
 class DartDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -65,7 +65,7 @@ class DartDemo extends StatelessWidget {
 class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -80,7 +80,7 @@ class Cart extends StatelessWidget {
 class FontsFamily extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -95,7 +95,7 @@ class FontsFamily extends StatelessWidget {
 class Gesture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -110,7 +110,7 @@ class Gesture extends StatelessWidget {
 class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -125,7 +125,7 @@ class Images extends StatelessWidget {
 class IO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -140,7 +140,7 @@ class IO extends StatelessWidget {
 class JsonSerializable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -156,7 +156,7 @@ class JsonSerializable extends StatelessWidget {
 class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -171,7 +171,7 @@ class Layout extends StatelessWidget {
 class LayoutMethod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -186,7 +186,7 @@ class LayoutMethod extends StatelessWidget {
 class List extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -201,7 +201,7 @@ class List extends StatelessWidget {
 class NavigatorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -216,7 +216,7 @@ class NavigatorItem extends StatelessWidget {
 class Network extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -231,7 +231,7 @@ class Network extends StatelessWidget {
 class NetworkHttp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -246,7 +246,7 @@ class NetworkHttp extends StatelessWidget {
 class PlatformChannel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -261,7 +261,7 @@ class PlatformChannel extends StatelessWidget {
 class StateManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -276,7 +276,7 @@ class StateManager extends StatelessWidget {
 class TextInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -291,7 +291,7 @@ class TextInput extends StatelessWidget {
 class CustomTheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -306,7 +306,7 @@ class CustomTheme extends StatelessWidget {
 class UrlLauncher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -321,7 +321,7 @@ class UrlLauncher extends StatelessWidget {
 class WidgetFramework extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -336,7 +336,7 @@ class WidgetFramework extends StatelessWidget {
 class Animation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -351,7 +351,7 @@ class Animation extends StatelessWidget {
 class WidgetLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -366,7 +366,7 @@ class WidgetLayout extends StatelessWidget {
 class TabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -381,7 +381,7 @@ class TabBar extends StatelessWidget {
 class Svg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -396,7 +396,7 @@ class Svg extends StatelessWidget {
 class Temp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -411,7 +411,7 @@ class Temp extends StatelessWidget {
 class Debug extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -426,7 +426,7 @@ class Debug extends StatelessWidget {
 class ForAndroid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -441,7 +441,7 @@ class ForAndroid extends StatelessWidget {
 class FlutterPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -471,7 +471,7 @@ class Permission extends StatelessWidget {
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -486,7 +486,7 @@ class Other extends StatelessWidget {
 class Widgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: () {
         Navigator.push(
           context,
@@ -526,7 +526,7 @@ class DebugPaintState extends State<DebugPaint> {
   @override
   Widget build(BuildContext context) {
     debugPaintSizeEnabled = _debugPaint;
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: _changeDebugPaint,
       child: Text(_str),
     );

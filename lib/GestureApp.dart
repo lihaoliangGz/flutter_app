@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -7,7 +8,8 @@ class MyHomePage extends StatelessWidget {
       child: new GestureDetector(
         onTap: () {
           final snackBar = new SnackBar(content: new Text("Tap"));
-          Scaffold.of(context).showSnackBar(snackBar);
+          Fluttertoast.showToast(msg: "Scaffold.of(context).showSnackBar(snackBar)");
+          //Scaffold.of(context).showSnackBar(snackBar);
         },
         child: new Container(
           padding: new EdgeInsets.all(12),
@@ -29,7 +31,8 @@ class RippleHomePage extends StatelessWidget {
       child: new InkWell(
         onTap: () {
           final snackBar = new SnackBar(content: new Text("Tap"));
-          Scaffold.of(context).showSnackBar(snackBar);
+          Fluttertoast.showToast(msg: "Scaffold.of(context).showSnackBar(snackBar)");
+          // Scaffold.of(context).showSnackBar(snackBar);
         },
         child: new Container(
           padding: new EdgeInsets.all(20),
@@ -54,8 +57,9 @@ class SlideHomePage extends StatelessWidget {
             key: new Key(item),
             onDismissed: (direction) {
               items.removeAt(index);
-              Scaffold.of(context).showSnackBar(
-                  new SnackBar(content: new Text("$item dismissed")));
+              Fluttertoast.showToast(msg: "Scaffold.of(context).showSnackBar(snackBar)");
+              // Scaffold.of(context).showSnackBar(
+              //     new SnackBar(content: new Text("$item dismissed")));
             },
             background: new Container(
               color: Colors.red,

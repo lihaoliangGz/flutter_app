@@ -26,7 +26,7 @@ class _OffstageDemoState extends State<OffStageDemo> {
       ),
       body: Column(
         children: <Widget>[
-          new RaisedButton(
+          new ElevatedButton (
             child: Center(child: Text("点击切换显示")),
             onPressed: () {
               setState(() {

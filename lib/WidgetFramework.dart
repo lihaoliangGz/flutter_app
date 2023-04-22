@@ -114,7 +114,7 @@ class CounterState extends State<Counter> {
   Widget build(BuildContext context) {
     return new Row(
       children: <Widget>[
-        new RaisedButton(
+        new ElevatedButton (
           onPressed: _increment,
           child: new Text("Increment"),
         ),
@@ -140,7 +140,7 @@ class CounterIncrementor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton (
       onPressed: onPressed,
       child: new Text("Increment"),
     );

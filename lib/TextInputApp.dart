@@ -22,7 +22,7 @@ class ExampleWidgetState extends State<ExampleWidget> {
           controller: _controller,
           decoration: new InputDecoration(hintText: "请输入内容"),
         ),
-        new RaisedButton(
+        new ElevatedButton (
           onPressed: () {
             showDialog(
                 context: context,

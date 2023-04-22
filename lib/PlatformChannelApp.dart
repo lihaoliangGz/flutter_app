@@ -44,7 +44,7 @@ class PlatformChannelState extends State<PlatformChannelApp> {
         body: new Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            new RaisedButton(
+            new ElevatedButton (
               onPressed: _getBatteryLevel,
               child: new Text('Get Battery Level'),
             ),

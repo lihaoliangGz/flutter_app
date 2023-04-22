@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 //--------- 导航到新页面并返回------------
 class FirstScreen extends StatelessWidget {
@@ -9,7 +10,7 @@ class FirstScreen extends StatelessWidget {
         title: new Text('First Screen'),
       ),
       body: new Center(
-        child: new RaisedButton(
+        child: new ElevatedButton(
             child: new Text('Launch new screen'),
             onPressed: () {
               Navigator.push(
@@ -30,7 +31,7 @@ class SecondScreen extends StatelessWidget {
         title: new Text('Second Screen'),
       ),
       body: new Center(
-        child: new RaisedButton(
+        child: new ElevatedButton(
             child: new Text('Go back!'),
             onPressed: () {
               Navigator.pop(context);
@@ -115,7 +116,7 @@ class HomeScreen extends StatelessWidget {
 class SelectionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new RaisedButton(
+    return new ElevatedButton(
       onPressed: () {
         _navigatorAndDisplaySelection(context);
       },
@@ -126,8 +127,9 @@ class SelectionButton extends StatelessWidget {
   _navigatorAndDisplaySelection(BuildContext context) async {
     final result = await Navigator.push(context,
         new MaterialPageRoute(builder: (context) => new SelectionScreen()));
-    Scaffold.of(context)
-        .showSnackBar(new SnackBar(content: new Text('$result')));
+    // Scaffold.of(context)
+    //     .showSnackBar(new SnackBar(content: new Text('$result')));
+    Fluttertoast.showToast(msg: "Scaffold.of(context).showSnackBar(snackBar)");
     print("result = $result");
   }
 }
@@ -145,7 +147,7 @@ class SelectionScreen extends StatelessWidget {
           children: <Widget>[
             new Padding(
               padding: const EdgeInsets.all(8),
-              child: new RaisedButton(
+              child: new ElevatedButton(
                   child: new Text('Yep!'),
                   onPressed: () {
                     Navigator.pop(context, 'Yep!');
@@ -153,7 +155,7 @@ class SelectionScreen extends StatelessWidget {
             ),
             new Padding(
               padding: const EdgeInsets.all(8),
-              child: new RaisedButton(
+              child: new ElevatedButton(
                   child: new Text('Nope.'),
                   onPressed: () {
                     Navigator.pop(context, 'Nope.');

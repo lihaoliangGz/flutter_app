@@ -9,7 +9,7 @@ class Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Center(
-      child: new RaisedButton(
+      child: new ElevatedButton (
         onPressed: _launchURL,
         child: new Text("打开默认浏览器"),
       ),

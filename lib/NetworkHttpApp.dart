@@ -57,7 +57,7 @@ class PageState extends State<Page> {
           new SizedBox(
             height: 32,
           ),
-          new RaisedButton(
+          new ElevatedButton (
             onPressed: _getIPAddress,
             child: new Text('Get Ip Address'),
           )

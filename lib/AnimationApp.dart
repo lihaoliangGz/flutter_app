@@ -199,7 +199,7 @@ class AnimationApp extends StatelessWidget {
               child: Text("https://flutterchina.club/animations/"),
               padding: new EdgeInsets.symmetric(vertical: 10),
             ),
-            new RaisedButton(
+            new ElevatedButton (
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
@@ -208,7 +208,7 @@ class AnimationApp extends StatelessWidget {
               },
               child: Text("动画示例-Logo"),
             ),
-            new RaisedButton(
+            new ElevatedButton (
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
@@ -217,7 +217,7 @@ class AnimationApp extends StatelessWidget {
               },
               child: Text('用AnimatedBuilder重构'),
             ),
-            new RaisedButton(
+            new ElevatedButton (
               onPressed: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {

@@ -10,7 +10,7 @@ class SharedPreferenceDemo extends StatelessWidget {
         title: Text("shared_preferences"),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton (
           onPressed: _incrementCounter,
           child: Text("Increment Counter"),
         ),

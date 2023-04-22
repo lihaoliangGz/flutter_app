@@ -15,7 +15,7 @@ class FlutterForAndroid extends StatelessWidget {
             child: Text("Views"),
             padding: new EdgeInsets.symmetric(vertical: 10),
           ),
-          RaisedButton(
+          ElevatedButton (
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ViewsPaintDemo();
@@ -27,7 +27,7 @@ class FlutterForAndroid extends StatelessWidget {
             child: Text("Activities和Fragments"),
             padding: new EdgeInsets.symmetric(vertical: 10),
           ),
-          RaisedButton(
+          ElevatedButton (
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                 return ActivityLifecycle();

@@ -24,7 +24,7 @@ class FlutterPluginDemo extends StatelessWidget {
 class _ImagePickerPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton (
       onPressed: () {
         Navigator.of(context).push(
             new MaterialPageRoute(builder: (context) => ImagePickerDemo()));
@@ -37,7 +37,7 @@ class _ImagePickerPlugin extends StatelessWidget {
 class _SharedPreference extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton (
       onPressed: () {
         Navigator.of(context).push(new MaterialPageRoute(
             builder: (context) => SharedPreferenceDemo()));
@@ -50,7 +50,7 @@ class _SharedPreference extends StatelessWidget {
 class _SQL extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
+    return ElevatedButton (
       onPressed: () {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (context) => SQLDemo()));
