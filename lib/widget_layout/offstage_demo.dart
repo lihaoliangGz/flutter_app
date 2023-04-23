@@ -10,7 +10,7 @@ class OffStageDemo extends StatefulWidget {
 }
 
 class _OffstageDemoState extends State<OffStageDemo> {
-  bool _offstage;
+  late bool _offstage;
 
   @override
   void initState() {

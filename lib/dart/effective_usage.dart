@@ -111,7 +111,7 @@ class EffectiveUsageDemo extends BaseStatelessApp {
   //============== 参数 ====================
   void _insert(Object item, {int at = 0}) {}
 
-  void error([String message]) {}
+  void error([String? message]) {}
 
   //============== 构造函数 ====================
 

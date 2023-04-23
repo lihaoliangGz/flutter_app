@@ -10,8 +10,6 @@ class TypedefDemo extends BaseStatelessApp {
     assert(coll.compare is Function);
     assert(coll.compare2 is Compare);
 
-
-
     return Center(
       child: Text("Typedefs"),
     );
@@ -26,7 +24,7 @@ class TypedefDemo extends BaseStatelessApp {
 typedef Compare = int Function(Object a, Object b);
 
 class SortedCollection {
-  Function compare;
+  late Function compare;
   Compare compare2;
 
   SortedCollection(int f(Object a, Object b), this.compare2) {
