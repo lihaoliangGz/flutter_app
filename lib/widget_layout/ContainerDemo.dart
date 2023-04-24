@@ -22,18 +22,25 @@ class ContainerDemo extends StatelessWidget {
               height: 48,
             ),
             Container(
+              alignment: Alignment.bottomRight,
+              child: Text('Hello World',
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline6
+                      ?.copyWith(color: Colors.white)),
+              //color: Colors.blue[600],
               constraints: BoxConstraints.expand(
                 height: Theme.of(context).textTheme.displayLarge?.fontSize ??
                     0 * 1.1 + 200.0,
               ),
+              decoration: new BoxDecoration(
+                  color: Colors.greenAccent[700],
+                  border: new Border.all(
+                    color: Color(0xFF00796B),
+                    width: 3.0,
+                  )),
+              margin: const EdgeInsets.all(25),
               padding: const EdgeInsets.all(8.0),
-              color: Colors.blue[600],
-              alignment: Alignment.center,
-              child: Text('Hello World',
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline1
-                      ?.copyWith(color: Colors.white)),
               transform: Matrix4.rotationZ(0.1),
             )
           ],
