@@ -105,4 +105,4 @@ flutter:
 # Android Studio or Idea plugin <FlutterAssetsGenerator> config.
 flutter_assets_generator:
   output_dir: assets
-  output_filename: assets_auto
+  output_filename: assets
