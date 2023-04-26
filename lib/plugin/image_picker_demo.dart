@@ -11,13 +11,43 @@ class ImagePickerDemo extends StatefulWidget {
 }
 
 class _ImagePickerDemoState extends State<ImagePickerDemo> {
-  late File _image;
-  final picker = ImagePicker();
+  File? _image;
 
+  //选择单张图片
   Future getImage() async {
-    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+    final picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    print("image: ${image?.path}");
     setState(() {
-      _image = File(pickedFile?.path ?? "");
+      _image = File(image?.path ?? "");
+    });
+  }
+
+  //选择多张图片
+  Future getMultiImage() async {
+    final picker = ImagePicker();
+    final List<XFile> images = await picker.pickMultiImage();
+    images.forEach((img) {
+      print("image: ${img.path}");
+    });
+  }
+
+  //选择视频
+  Future getVideo() async {
+    final picker = ImagePicker();
+    final XFile? video = await picker.pickVideo(source: ImageSource.gallery);
+    print("video: ${video?.path}");
+  }
+
+  Future<void> getLostData() async {
+    final ImagePicker picker = ImagePicker();
+    final LostDataResponse response = await picker.retrieveLostData();
+    if (response.isEmpty) {
+      return;
+    }
+    final List<XFile>? files = response.files;
+    files?.forEach((xFile) {
+      print("xFile: ${xFile.path}");
     });
   }
 
@@ -27,8 +57,32 @@ class _ImagePickerDemoState extends State<ImagePickerDemo> {
       appBar: AppBar(
         title: Text('Image Picker Example'),
       ),
-      body: Center(
-        child: _image == null ? Text('No image selected.') : Image.file(_image),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Expanded(
+            child: Center(
+              child: _image == null
+                  ? Text('No image selected.')
+                  : Image.file(_image!),
+            ),
+          ),
+          ElevatedButton(
+              onPressed: () {
+                getMultiImage();
+              },
+              child: Text("选择多张图片")),
+          ElevatedButton(
+              onPressed: () {
+                getVideo();
+              },
+              child: Text("选择视频")),
+          ElevatedButton(
+              onPressed: () {
+                getLostData();
+              },
+              child: Text("getLostData")),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: getImage,
