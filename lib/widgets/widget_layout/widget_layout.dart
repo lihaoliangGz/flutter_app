@@ -6,7 +6,7 @@ import 'center_demo.dart';
 import 'container_demo.dart';
 import 'fitted_box_demo.dart';
 import 'padding_demo.dart';
-import 'stack_demo.dart';
+import 'stack_page.dart';
 import 'baseline_demo.dart';
 import 'constrained_box_demo.dart';
 import 'intrinsic_height_demo.dart';
@@ -182,7 +182,7 @@ class WidgetLayoutApp extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context)
                       .push(new MaterialPageRoute(builder: (context) {
-                    return new StackDemo();
+                    return new StackPage();
                   }));
                 },
               ),

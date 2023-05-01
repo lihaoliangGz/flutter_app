@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class StackDemo extends StatelessWidget {
+class StackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,6 +15,9 @@ class StackDemo extends StatelessWidget {
                   height: 300,
                   child: Center(
                     child: Stack(
+                      alignment: AlignmentDirectional.bottomEnd,
+                      //fit: StackFit.expand,
+                      textDirection: TextDirection.ltr,
                       children: <Widget>[
                         Container(
                           width: 100,
@@ -61,9 +64,36 @@ class StackDemo extends StatelessWidget {
                   ],
                 ),
               ),
+              Container(
+                color: Colors.white70,
+                width: 200,
+                height: 200,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      child: Text("Positioned1"),
+                      top: 50,
+                      left: 20,
+                    ),
+                    Positioned(
+                      child: Text("Positioned2"),
+                      top: 120,
+                      left: 40,
+                    ),
+                    Positioned(
+                      child: Container(
+                        color: Colors.cyanAccent,
+                        child: Text("Positioned3,in Container"),
+                      ),
+                      width: 100,
+                      height: 50,
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 20,
-              )
+              ),
             ],
           )),
     );
