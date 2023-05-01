@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ListViewDemo extends StatelessWidget {
+class ListViewPage extends StatelessWidget {
   final List<String> entries = ["A", "B", "C"];
   final List<int> colorCodes = <int>[600, 500, 100];
 

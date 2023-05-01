@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/widgets/widget_layout/column_page.dart';
 import 'package:flutterapp/widgets/widget_layout/expanded_page.dart';
+import 'package:flutterapp/widgets/widget_layout/multi_list_view_page.dart';
 import 'package:flutterapp/widgets/widget_layout/row_page.dart';
 
 import 'align_demo.dart';
@@ -12,7 +13,7 @@ import 'container_demo.dart';
 import 'fitted_box_demo.dart';
 import 'intrinsic_height_demo.dart';
 import 'limited_box_demo.dart';
-import 'listview_demo.dart';
+import 'listview_page.dart';
 import 'offstage_demo.dart';
 import 'overflow_box_demo.dart';
 import 'padding_demo.dart';
@@ -201,7 +202,14 @@ class WidgetLayoutApp extends StatelessWidget {
               title: Text("ListView"),
               onTap: () {
                 Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (context) => ListViewDemo()));
+                    builder: (context) => ListViewPage()));
+              },
+            ),
+            ListTile(
+              title: Text("ListView多布局"),
+              onTap: () {
+                Navigator.of(context).push(new MaterialPageRoute(
+                    builder: (context) => MultiListViewPage()));
               },
             ),
             ListTile(
