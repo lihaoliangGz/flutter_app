@@ -3,14 +3,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutterapp/AnimationApp.dart';
 import 'package:flutterapp/CartApp.dart';
 import 'package:flutterapp/FirstFlutterApp.dart';
-import 'package:flutterapp/FontsFamilyApp.dart';
-import 'package:flutterapp/GestureApp.dart';
 import 'package:flutterapp/IOApp.dart';
 import 'package:flutterapp/ImagesApp.dart';
 import 'package:flutterapp/JsonSerializableApp.dart';
 import 'package:flutterapp/LayoutApp.dart';
 import 'package:flutterapp/LayoutMethodApp.dart';
-import 'package:flutterapp/ListApp.dart';
 import 'package:flutterapp/NavigatorApp.dart';
 import 'package:flutterapp/NetworkApp.dart';
 import 'package:flutterapp/NetworkHttpApp.dart';
@@ -22,24 +19,26 @@ import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/fonts_family_app.dart';
+import 'package:flutterapp/gesture/gesture__app.dart';
+import 'package:flutterapp/material/material_design_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/temp/temp_app.dart';
-import 'package:flutterapp/widget_layout/WidgetLayout.dart';
-import 'package:flutterapp/widget_menu/widgets_menu.dart';
 
 import 'TabBarApp.dart';
+import 'widgets/widgets_app.dart' as WidgetsApp;
 
 class FirstFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new FirstFlutterApp()),
+          MaterialPageRoute(builder: (context) => FirstFlutterApp()),
         );
       },
       child: Text("编写您的第一个 Flutter App"),
@@ -50,11 +49,11 @@ class FirstFlutter extends StatelessWidget {
 class DartDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new DartApp()),
+          MaterialPageRoute(builder: (context) => DartApp()),
         );
       },
       child: Text("Dart"),
@@ -65,11 +64,11 @@ class DartDemo extends StatelessWidget {
 class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new CartApp()),
+          MaterialPageRoute(builder: (context) => CartApp()),
         );
       },
       child: Text('购物车'),
@@ -80,11 +79,11 @@ class Cart extends StatelessWidget {
 class FontsFamily extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new FontsFamilyApp()),
+          MaterialPageRoute(builder: (context) => FontsFamilyApp()),
         );
       },
       child: Text('自定义字体'),
@@ -95,11 +94,11 @@ class FontsFamily extends StatelessWidget {
 class Gesture extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new GestureApp()),
+          MaterialPageRoute(builder: (context) => GestureApp()),
         );
       },
       child: Text('处理手势'),
@@ -110,11 +109,11 @@ class Gesture extends StatelessWidget {
 class Images extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new ImagesApp()),
+          MaterialPageRoute(builder: (context) => ImagesApp()),
         );
       },
       child: Text('加载图片'),
@@ -125,11 +124,11 @@ class Images extends StatelessWidget {
 class IO extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new IOApp()),
+          MaterialPageRoute(builder: (context) => IOApp()),
         );
       },
       child: Text('读写文件'),
@@ -140,12 +139,11 @@ class IO extends StatelessWidget {
 class JsonSerializable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(
-              builder: (context) => new JsonSerializableApp()),
+          MaterialPageRoute(builder: (context) => JsonSerializableApp()),
         );
       },
       child: Text('JSON和序列化'),
@@ -156,11 +154,11 @@ class JsonSerializable extends StatelessWidget {
 class Layout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new LayoutApp()),
+          MaterialPageRoute(builder: (context) => LayoutApp()),
         );
       },
       child: Text('在Flutter布局UI'),
@@ -171,11 +169,11 @@ class Layout extends StatelessWidget {
 class LayoutMethod extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new LayoutMethodApp()),
+          MaterialPageRoute(builder: (context) => LayoutMethodApp()),
         );
       },
       child: Text('Flutter的布局方法'),
@@ -183,29 +181,14 @@ class LayoutMethod extends StatelessWidget {
   }
 }
 
-class List extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new ElevatedButton (
-      onPressed: () {
-        Navigator.push(
-          context,
-          new MaterialPageRoute(builder: (context) => new ListApp()),
-        );
-      },
-      child: Text('创建一个ListView'),
-    );
-  }
-}
-
 class NavigatorItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new NavigatorApp()),
+          MaterialPageRoute(builder: (context) => NavigatorApp()),
         );
       },
       child: Text('导航'),
@@ -216,11 +199,11 @@ class NavigatorItem extends StatelessWidget {
 class Network extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new NetworkApp()),
+          MaterialPageRoute(builder: (context) => NetworkApp()),
         );
       },
       child: Text('网络'),
@@ -231,11 +214,11 @@ class Network extends StatelessWidget {
 class NetworkHttp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new NetworkHttpApp()),
+          MaterialPageRoute(builder: (context) => NetworkHttpApp()),
         );
       },
       child: Text('网络和Http'),
@@ -246,11 +229,11 @@ class NetworkHttp extends StatelessWidget {
 class PlatformChannel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new PlatformChannelApp()),
+          MaterialPageRoute(builder: (context) => PlatformChannelApp()),
         );
       },
       child: Text('使用平台通道编写平台特定的代码'),
@@ -261,11 +244,11 @@ class PlatformChannel extends StatelessWidget {
 class StateManager extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new StateManagerApp()),
+          MaterialPageRoute(builder: (context) => StateManagerApp()),
         );
       },
       child: Text('状态管理'),
@@ -276,11 +259,11 @@ class StateManager extends StatelessWidget {
 class TextInput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new TextInputApp()),
+          MaterialPageRoute(builder: (context) => TextInputApp()),
         );
       },
       child: Text('文本输入'),
@@ -291,11 +274,11 @@ class TextInput extends StatelessWidget {
 class CustomTheme extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new ThemeApp()),
+          MaterialPageRoute(builder: (context) => ThemeApp()),
         );
       },
       child: Text('自定义主题'),
@@ -306,11 +289,11 @@ class CustomTheme extends StatelessWidget {
 class UrlLauncher extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new UrlLauncherApp()),
+          MaterialPageRoute(builder: (context) => UrlLauncherApp()),
         );
       },
       child: Text('启动浏览器'),
@@ -321,11 +304,11 @@ class UrlLauncher extends StatelessWidget {
 class WidgetFramework extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new WidgetFrameworkApp()),
+          MaterialPageRoute(builder: (context) => WidgetFrameworkApp()),
         );
       },
       child: Text('Flutter Widget框架概述'),
@@ -336,11 +319,11 @@ class WidgetFramework extends StatelessWidget {
 class Animation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new AnimationApp()),
+          MaterialPageRoute(builder: (context) => AnimationApp()),
         );
       },
       child: Text('Flutter中的动画'),
@@ -348,17 +331,17 @@ class Animation extends StatelessWidget {
   }
 }
 
-class WidgetLayout extends StatelessWidget {
+class Widgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new WidgetLayoutApp()),
+          MaterialPageRoute(builder: (context) => WidgetsApp.WidgetsApp()),
         );
       },
-      child: Text('Flutter所提供的所有布局'),
+      child: Text('Widgets'),
     );
   }
 }
@@ -366,11 +349,11 @@ class WidgetLayout extends StatelessWidget {
 class TabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new TabBarApp()),
+          MaterialPageRoute(builder: (context) => TabBarApp()),
         );
       },
       child: Text('TabBar'),
@@ -381,11 +364,11 @@ class TabBar extends StatelessWidget {
 class Svg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new SvgApp()),
+          MaterialPageRoute(builder: (context) => SvgApp()),
         );
       },
       child: Text('Svg'),
@@ -396,11 +379,11 @@ class Svg extends StatelessWidget {
 class Temp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new TempApp()),
+          MaterialPageRoute(builder: (context) => TempApp()),
         );
       },
       child: Text('Temp'),
@@ -411,11 +394,11 @@ class Temp extends StatelessWidget {
 class Debug extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new DebugApp()),
+          MaterialPageRoute(builder: (context) => DebugApp()),
         );
       },
       child: Text('调试 Flutter Apps'),
@@ -426,11 +409,11 @@ class Debug extends StatelessWidget {
 class ForAndroid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => new FlutterPlugin()),
+          MaterialPageRoute(builder: (context) => FlutterPlugin()),
         );
       },
       child: Text('Flutter For Android'),
@@ -441,11 +424,11 @@ class ForAndroid extends StatelessWidget {
 class FlutterPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => FlutterPluginDemo()),
+          MaterialPageRoute(builder: (context) => FlutterPluginDemo()),
         );
       },
       child: Text('Flutter 插件'),
@@ -460,7 +443,7 @@ class Permission extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => PermissionDemo()),
+          MaterialPageRoute(builder: (context) => PermissionDemo()),
         );
       },
       child: Text("权限"),
@@ -468,32 +451,32 @@ class Permission extends StatelessWidget {
   }
 }
 
-class Other extends StatelessWidget {
+class MaterialDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => OtherDemo()),
+          MaterialPageRoute(builder: (context) => MaterialDesignApp()),
         );
       },
-      child: Text("其他"),
+      child: Text("Material Design"),
     );
   }
 }
 
-class Widgets extends StatelessWidget {
+class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          new MaterialPageRoute(builder: (context) => WidgetsMenu()),
+          MaterialPageRoute(builder: (context) => OtherDemo()),
         );
       },
-      child: Text('Widgets 目录'),
+      child: Text("其他"),
     );
   }
 }
@@ -502,7 +485,7 @@ class Widgets extends StatelessWidget {
 class DebugPaint extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new DebugPaintState();
+    return DebugPaintState();
   }
 }
 
@@ -526,7 +509,7 @@ class DebugPaintState extends State<DebugPaint> {
   @override
   Widget build(BuildContext context) {
     debugPaintSizeEnabled = _debugPaint;
-    return new ElevatedButton (
+    return ElevatedButton(
       onPressed: _changeDebugPaint,
       child: Text(_str),
     );
@@ -536,41 +519,40 @@ class DebugPaintState extends State<DebugPaint> {
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new ListView(
+    return ListView(
       children: <Widget>[
-        new FirstFlutter(),
+        FirstFlutter(),
         DartDemo(),
-        new Cart(),
-        new FontsFamily(),
-        new Gesture(),
-        new Images(),
-        new IO(),
-        new JsonSerializable(),
-        new Layout(),
-        new LayoutMethod(),
-        new List(),
-        new NavigatorItem(),
-        new Network(),
-        new NetworkHttp(),
-        new PlatformChannel(),
-        new StateManager(),
-        new TextInput(),
-        new CustomTheme(),
-        new UrlLauncher(),
-        new WidgetFramework(),
-        new Animation(),
-        new WidgetLayout(),
-        new TabBar(),
-        new Svg(),
-        new Temp(),
-        new Debug(),
-        new ForAndroid(),
-        FlutterPlugin(),
+        Cart(),
+        FontsFamily(),
+        Gesture(),
+        Images(),
+        IO(),
+        JsonSerializable(),
+        Layout(),
+        LayoutMethod(),
+        NavigatorItem(),
+        Network(),
+        NetworkHttp(),
+        PlatformChannel(),
+        StateManager(),
+        TextInput(),
+        CustomTheme(),
+        UrlLauncher(),
+        WidgetFramework(),
+        Animation(),
         Widgets(),
+        TabBar(),
+        Svg(),
+        Temp(),
+        Debug(),
+        ForAndroid(),
+        FlutterPlugin(),
         Permission(),
+        MaterialDesign(),
         Other(),
         //===========footer============
-        new DebugPaint()
+        DebugPaint()
       ],
     );
   }
@@ -579,12 +561,12 @@ class MainPage extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-          appBar: new AppBar(
-            title: new Text("Flutter"),
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter"),
           ),
-          body: new MainPage()),
+          body: MainPage()),
     );
   }
 }
