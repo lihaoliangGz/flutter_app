@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
-class ColumnDemo extends BaseStatelessApp {
+class ColumnPage extends BaseStatelessApp {
   @override
   Widget getBody() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      verticalDirection: VerticalDirection.up,
+      textDirection: TextDirection.rtl,
       children: <Widget>[
         Text('Deliver features faster'),
         Text('Craft beautiful UIs'),

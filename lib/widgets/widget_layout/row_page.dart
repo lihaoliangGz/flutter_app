@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
-class RowDemo extends BaseStatelessApp {
+class RowPage extends BaseStatelessApp {
   @override
   Widget getBody() {
     return Row(
+      textDirection: TextDirection.rtl,
+      // mainAxisAlignment: ,
+      // crossAxisAlignment: ,
+      // mainAxisSize: ,
+      verticalDirection: VerticalDirection.up,
       children: <Widget>[
         Expanded(
           child: Text('Deliver features faster', textAlign: TextAlign.center),
