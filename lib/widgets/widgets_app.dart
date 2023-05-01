@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/clip/clip_app.dart';
-import 'package:flutterapp/widgets/widget_layout/widget_layout.dart';
+import 'package:flutterapp/widgets/other_app.dart';
+import 'package:flutterapp/widgets/widget_layout/widget_layout_app.dart';
 
 class WidgetsApp extends BaseStatelessApp {
   @override
@@ -23,6 +24,15 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ClipApp()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("other"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OtherApp()),
             );
           },
         ),

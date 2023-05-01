@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/widgets/widget_layout/expanded_page.dart';
 
 import 'align_demo.dart';
 import 'aspect_ratio_demo.dart';
+import 'baseline_demo.dart';
 import 'center_demo.dart';
+import 'constrained_box_demo.dart';
 import 'container_demo.dart';
 import 'fitted_box_demo.dart';
-import 'padding_demo.dart';
-import 'stack_page.dart';
-import 'baseline_demo.dart';
-import 'constrained_box_demo.dart';
 import 'intrinsic_height_demo.dart';
 import 'limited_box_demo.dart';
 import 'listview_demo.dart';
 import 'offstage_demo.dart';
 import 'overflow_box_demo.dart';
+import 'padding_demo.dart';
 import 'sized_box_demo.dart';
 import 'sized_overflow_box_demo.dart';
+import 'stack_page.dart';
 import 'transform_demo.dart';
 
 class WidgetLayoutApp extends StatelessWidget {
@@ -169,8 +170,16 @@ class WidgetLayoutApp extends StatelessWidget {
                   }));
                 },
               ),
-
-              //===============================================================
+              new ListTile(
+                title: new Text("Expanded"),
+                onTap: () {
+                  Navigator.of(context)
+                      .push(new MaterialPageRoute(builder: (context) {
+                    return ExpandedPage();
+                  }));
+                },
+              ),
+              //========================多个========================
               new Container(
                 child: new Text("拥有多个子元素的布局widget"),
                 alignment: AlignmentDirectional.center,
