@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class OffStageDemo extends StatefulWidget {
+class OffStagePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _OffstageDemoState();
   }
 }
 
-class _OffstageDemoState extends State<OffStageDemo> {
+class _OffstageDemoState extends State<OffStagePage> {
   late bool _offstage;
 
   @override

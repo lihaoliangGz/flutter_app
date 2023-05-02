@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/widgets/MediaQueryPage.dart';
 import 'package:flutterapp/widgets/icon_page.dart';
 
 class OtherApp extends BaseStatelessApp {
@@ -13,6 +14,15 @@ class OtherApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => IconPage()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("MediaQuery"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MediaQueryPage()),
             );
           },
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/widgets/widget_layout/column_page.dart';
 import 'package:flutterapp/widgets/widget_layout/expanded_page.dart';
+import 'package:flutterapp/widgets/widget_layout/gridview/grid_view_app.dart';
 import 'package:flutterapp/widgets/widget_layout/multi_list_view_page.dart';
 import 'package:flutterapp/widgets/widget_layout/row_page.dart';
 
@@ -14,7 +15,7 @@ import 'fitted_box_demo.dart';
 import 'intrinsic_height_demo.dart';
 import 'limited_box_demo.dart';
 import 'listview_page.dart';
-import 'offstage_demo.dart';
+import 'offstage_page.dart';
 import 'overflow_box_demo.dart';
 import 'padding_demo.dart';
 import 'sized_box_demo.dart';
@@ -133,7 +134,7 @@ class WidgetLayoutApp extends StatelessWidget {
               onTap: () {
                 Navigator.of(context)
                     .push(new MaterialPageRoute(builder: (context) {
-                  return new OffStageDemo();
+                  return new OffStagePage();
                 }));
               },
             ),
@@ -210,6 +211,13 @@ class WidgetLayoutApp extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(new MaterialPageRoute(
                     builder: (context) => MultiListViewPage()));
+              },
+            ),
+            ListTile(
+              title: Text("GridView"),
+              onTap: () {
+                Navigator.of(context).push(
+                    new MaterialPageRoute(builder: (context) => GridViewApp()));
               },
             ),
             ListTile(
