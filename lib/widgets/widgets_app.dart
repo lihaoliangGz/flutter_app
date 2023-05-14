@@ -3,6 +3,7 @@ import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/clip/clip_app.dart';
 import 'package:flutterapp/widgets/materialwidget/material_component_widget_app.dart';
 import 'package:flutterapp/widgets/other_app.dart';
+import 'package:flutterapp/widgets/text_widgets/text_widgets_app.dart';
 import 'package:flutterapp/widgets/widget_layout/widget_layout_app.dart';
 
 class WidgetsApp extends BaseStatelessApp {
@@ -35,6 +36,15 @@ class WidgetsApp extends BaseStatelessApp {
               context,
               MaterialPageRoute(
                   builder: (context) => MaterialComponentWidgetApp()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("Text Widgets"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => TextWidgetsApp()),
             );
           },
         ),
