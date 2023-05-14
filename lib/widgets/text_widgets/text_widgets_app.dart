@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/widgets/text_widgets/rich_text_page.dart';
 import 'package:flutterapp/widgets/text_widgets/text_page.dart';
 
 class TextWidgetsApp extends BaseStatelessApp {
@@ -15,7 +16,16 @@ class TextWidgetsApp extends BaseStatelessApp {
               MaterialPageRoute(builder: (context) => TextPage()),
             );
           },
-        )
+        ),
+        ListTile(
+          title: Text("RichText"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => RichTextPage()),
+            );
+          },
+        ),
       ],
     );
   }

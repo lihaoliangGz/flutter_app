@@ -11,7 +11,6 @@ class TextPage extends BaseStatelessApp {
           textAlign: TextAlign.left,
           textScaleFactor: 1.5,
           overflow: TextOverflow.ellipsis,
-          selectionColor: Colors.cyanAccent,
         ),
         Center(
           child: Text.rich(
@@ -33,7 +32,10 @@ class TextPage extends BaseStatelessApp {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text('Selectable text'),
+              Text(
+                'Selectable text',
+                selectionColor: Colors.amber,
+              ),
               SizedBox(height: 10),
               SelectionContainer.disabled(child: Text('Non-selectable text')),
               SizedBox(height: 10),
