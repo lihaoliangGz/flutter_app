@@ -29,9 +29,9 @@ class PlaceHolderImage extends StatelessWidget {
       child: Center(
         child: new Stack(
           children: <Widget>[
-            new Center(
-              child: new CircularProgressIndicator(),
-            ),
+            // new Center(
+            //   child: new CircularProgressIndicator(),
+            // ),
             new Center(
               child: new FadeInImage.memoryNetwork(
                   placeholder: kTransparentImage, image: temp),

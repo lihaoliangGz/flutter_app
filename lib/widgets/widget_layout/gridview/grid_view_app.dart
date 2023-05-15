@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/widgets/widget_layout/gridview/grid_view_count_page.dart';
 
 class GridViewApp extends BaseStatelessApp {
   @override
@@ -9,10 +8,10 @@ class GridViewApp extends BaseStatelessApp {
     return ListView(
       children: [
         ListTile(
-          title: Text(""),
+          title: Text("GridView.count"),
           onTap: () {
-            // Navigator.of(context).push(
-            //     new MaterialPageRoute(builder: (context) => RowPage()));
+            Navigator.of(context).push(new MaterialPageRoute(
+                builder: (context) => GridViewCountPage()));
           },
         )
       ],
