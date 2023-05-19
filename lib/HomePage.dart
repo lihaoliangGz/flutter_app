@@ -25,8 +25,10 @@ import 'package:flutterapp/material/material_design_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
+import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/temp/temp_app.dart';
+import 'package:flutterapp/test_debug/TestDebugApp.dart';
 
 import 'TabBarApp.dart';
 import 'widgets/widgets_app.dart' as WidgetsApp;
@@ -466,6 +468,36 @@ class MaterialDesign extends StatelessWidget {
   }
 }
 
+class StatusBar extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => StatusBarPage()),
+        );
+      },
+      child: Text("Status bar"),
+    );
+  }
+}
+
+class TestDebug extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => TestDebugApp()),
+        );
+      },
+      child: Text("测试和调试"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -523,6 +555,7 @@ class MainPage extends StatelessWidget {
       children: <Widget>[
         FirstFlutter(),
         DartDemo(),
+        TestDebug(),
         Cart(),
         FontsFamily(),
         Gesture(),
@@ -550,6 +583,7 @@ class MainPage extends StatelessWidget {
         FlutterPlugin(),
         Permission(),
         MaterialDesign(),
+        StatusBar(),
         Other(),
         //===========footer============
         DebugPaint()
@@ -562,6 +596,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, widget) {
+        Widget error = const Text('...rendering error...');
+        if (widget is Scaffold || widget is Navigator) {
+          error = Scaffold(body: Center(child: error));
+        }
+        ErrorWidget.builder = (errorDetails) {
+          return error;
+        };
+        if (widget != null) return widget;
+        throw ('widget is null');
+      },
       home: Scaffold(
           appBar: AppBar(
             title: Text("Flutter"),
