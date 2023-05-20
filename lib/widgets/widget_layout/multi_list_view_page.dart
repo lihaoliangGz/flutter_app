@@ -26,6 +26,8 @@ class MultiListViewPage extends BaseStatelessApp {
             title: new Text(item.sender),
             subtitle: new Text(item.body),
           );
+        } else {
+          return SizedBox();
         }
       },
     );

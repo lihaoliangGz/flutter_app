@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
 ///Effective dart-使用
@@ -24,31 +22,11 @@ class EffectiveUsageDemo extends BaseStatelessApp {
             onPressed: () {
               _insert("");
             }),
-        MaterialButton(
-            child: Text("变量"),
-            onPressed: () {
-
-            }),
-        MaterialButton(
-            child: Text("成员"),
-            onPressed: () {
-
-            }),
-        MaterialButton(
-            child: Text("构造函数"),
-            onPressed: () {
-
-            }),
-        MaterialButton(
-            child: Text("错误处理"),
-            onPressed: () {
-
-            }),
-        MaterialButton(
-            child: Text("异步"),
-            onPressed: () {
-
-            }),
+        MaterialButton(child: Text("变量"), onPressed: () {}),
+        MaterialButton(child: Text("成员"), onPressed: () {}),
+        MaterialButton(child: Text("构造函数"), onPressed: () {}),
+        MaterialButton(child: Text("错误处理"), onPressed: () {}),
+        MaterialButton(child: Text("异步"), onPressed: () {}),
       ],
     );
   }
@@ -73,7 +51,7 @@ class EffectiveUsageDemo extends BaseStatelessApp {
 
     var objects = [1, "a", 2, "b", 3];
     var ints = objects.whereType<int>();
-    print("ints=${ints}");
+    print("ints=$ints");
   }
 
   _cast() {
@@ -113,7 +91,5 @@ class EffectiveUsageDemo extends BaseStatelessApp {
 
   void error([String? message]) {}
 
-  //============== 构造函数 ====================
-
-
+//============== 构造函数 ====================
 }

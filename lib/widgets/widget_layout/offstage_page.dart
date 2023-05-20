@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class OffStagePage extends StatefulWidget {
   @override
@@ -26,7 +24,7 @@ class _OffstageDemoState extends State<OffStagePage> {
       ),
       body: Column(
         children: <Widget>[
-          new ElevatedButton (
+          new ElevatedButton(
             child: Center(child: Text("点击切换显示")),
             onPressed: () {
               setState(() {

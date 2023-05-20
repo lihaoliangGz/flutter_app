@@ -1,5 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
 class OtherDemo extends BaseStatelessApp {
@@ -32,12 +31,12 @@ class OtherDemo extends BaseStatelessApp {
 
   Future<void> printWithDelay(String msg) async {
     await Future.delayed(Duration(seconds: 5));
-    print("msg=${msg}");
+    print("msg=$msg");
   }
 
   Future<void> printWithDelay2(String msg) {
     return Future.delayed(Duration(seconds: 5)).then((value) {
-      print("msg2=${msg}");
+      print("msg2=$msg");
     });
   }
 

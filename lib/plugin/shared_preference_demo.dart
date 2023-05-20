@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -10,7 +9,7 @@ class SharedPreferenceDemo extends StatelessWidget {
         title: Text("shared_preferences"),
       ),
       body: Center(
-        child: ElevatedButton (
+        child: ElevatedButton(
           onPressed: _incrementCounter,
           child: Text("Increment Counter"),
         ),

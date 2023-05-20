@@ -165,8 +165,9 @@ class TapboxCState extends State<TapboxC> {
 class Point {
   late num x, y;
 
-  //Point(this.x, this.y);
-  Point(this.x, this.y) {}
+  Point(this.x, this.y);
+
+  //Point(this.x, this.y) {}
 
   Point.origin() {
     this.x = 0;

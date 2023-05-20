@@ -23,7 +23,7 @@ class PlatformChannelState extends State<PlatformChannelApp> {
     } on PlatformException catch (e) {
       batteryLevel = "Failed to get battery level: '${e.message}'。";
     } catch (e) {
-      batteryLevel = "e= ${e}";
+      batteryLevel = "e= $e";
     }
 
     setState(() {

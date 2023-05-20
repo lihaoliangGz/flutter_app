@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-/**
- * 刷新框架 +（加载/错误/空数据-布局）
- * @Creator:WuJun
- */
+///刷新框架 +（加载/错误/空数据-布局）
+
 //四种视图状态
 enum LoadState { State_Loading, State_Default, State_Error, State_Empty }
 
@@ -69,13 +67,10 @@ class _LoadStateWidgetState extends State<CustomRefreshWidget> {
     switch (widget.state) {
       case LoadState.State_Loading:
         return _loadingView;
-        break;
       case LoadState.State_Error:
         return _errorView;
-        break;
       case LoadState.State_Empty:
         return _emptyView;
-        break;
       case LoadState.State_Default:
       default:
         return widget.child;

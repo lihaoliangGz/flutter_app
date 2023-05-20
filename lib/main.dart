@@ -20,11 +20,11 @@ void main() {
 
   FlutterError.onError = (details) {
     FlutterError.presentError(details);
-    print("FlutterError.onError, details:\n${details}");
+    print("FlutterError.onError, details:\n$details");
   };
 
   PlatformDispatcher.instance.onError = (error, stack) {
-    print("PlatformDispatcher.onError, error:\n${error}\n stack:\n${stack}");
+    print("PlatformDispatcher.onError, error:\n$error\n stack:\n$stack");
     return true;
   };
 

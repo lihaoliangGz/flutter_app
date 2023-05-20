@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
 class HandleErrorPage extends BaseStatelessApp {
-  var content = null;
+  var content;
 
   @override
   Widget getBody() {
