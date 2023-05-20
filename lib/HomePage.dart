@@ -25,6 +25,7 @@ import 'package:flutterapp/material/material_design_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
+import 'package:flutterapp/reload_page.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/temp/temp_app.dart';
@@ -498,6 +499,21 @@ class TestDebug extends StatelessWidget {
   }
 }
 
+class Reload extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ReloadPage()),
+        );
+      },
+      child: Text("热重载"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -584,6 +600,7 @@ class MainPage extends StatelessWidget {
         Permission(),
         MaterialDesign(),
         StatusBar(),
+        Reload(),
         Other(),
         //===========footer============
         DebugPaint()
