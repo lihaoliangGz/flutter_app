@@ -13,15 +13,15 @@ class MyHomePage extends StatelessWidget {
       ),
       body: new Center(
         child: new Container(
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).colorScheme.secondary,
           child: new Text(
             'Text with a background color',
-            style: Theme.of(context).textTheme.subtitle1,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         ),
       ),
       floatingActionButton: new Theme(
-        data: Theme.of(context).copyWith(accentColor: Colors.yellow),
+        data: Theme.of(context).copyWith(colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.yellow)),
         child: new FloatingActionButton(
           onPressed: null,
           child: new Icon(Icons.add),
@@ -40,8 +40,7 @@ class ThemeApp extends StatelessWidget {
       title: appName,
       theme: new ThemeData(
           brightness: Brightness.dark,
-          primaryColor: Colors.lightBlue[800],
-          accentColor: Colors.cyan[600]),
+          primaryColor: Colors.lightBlue[800], colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.cyan[600])),
       home: new MyHomePage(title: appName),
     );
   }

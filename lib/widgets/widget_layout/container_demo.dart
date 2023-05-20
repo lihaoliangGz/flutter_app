@@ -26,7 +26,7 @@ class ContainerDemo extends StatelessWidget {
               child: Text('Hello World',
                   style: Theme.of(context)
                       .textTheme
-                      .headline6
+                      .titleLarge
                       ?.copyWith(color: Colors.white)),
               //color: Colors.blue[600],
               constraints: BoxConstraints.expand(

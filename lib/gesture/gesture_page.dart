@@ -19,7 +19,7 @@ class GesturePage extends BaseStatelessApp {
           width: 300,
           padding: new EdgeInsets.all(12),
           decoration: new BoxDecoration(
-              color: Theme.of(context).buttonColor,
+              color: Theme.of(context).primaryColorLight,
               borderRadius: new BorderRadius.circular(8)),
           child: new Text("My Button"),
         ),

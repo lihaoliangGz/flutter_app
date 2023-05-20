@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/widgets.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
 ///Effective dart-文档
