@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/materialwidget/app_bar_page.dart';
+import 'package:flutterapp/widgets/materialwidget/card_example.dart';
 import 'package:flutterapp/widgets/materialwidget/elevated_button_page.dart';
 import 'package:flutterapp/widgets/materialwidget/material_app_page.dart';
 import 'package:flutterapp/widgets/materialwidget/outlined_button_page.dart';
@@ -74,6 +75,22 @@ class MaterialComponentWidgetApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => TextFieldPage()),
+            );
+          },
+        ),
+        Container(
+          width: double.infinity,
+          height: 60,
+          color: Color(0XFFCCCCCC),
+          alignment: AlignmentDirectional.centerStart,
+          child: Text("Information displays"),
+        ),
+        ListTile(
+          title: Text("Card"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CardExample()),
             );
           },
         ),
