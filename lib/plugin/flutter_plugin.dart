@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/plugin/image_picker_demo.dart';
+import 'package:flutterapp/plugin/path_example.dart';
 import 'package:flutterapp/plugin/shared_preference_demo.dart';
 import 'package:flutterapp/plugin/sql_demo.dart';
 
@@ -15,6 +16,7 @@ class FlutterPluginDemo extends StatelessWidget {
           _ImagePickerPlugin(),
           _SharedPreference(),
           _SQL(),
+          _Path(),
         ],
       ),
     );
@@ -24,7 +26,7 @@ class FlutterPluginDemo extends StatelessWidget {
 class _ImagePickerPlugin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.of(context).push(
             new MaterialPageRoute(builder: (context) => ImagePickerDemo()));
@@ -37,7 +39,7 @@ class _ImagePickerPlugin extends StatelessWidget {
 class _SharedPreference extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.of(context).push(new MaterialPageRoute(
             builder: (context) => SharedPreferenceDemo()));
@@ -50,12 +52,25 @@ class _SharedPreference extends StatelessWidget {
 class _SQL extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton (
+    return ElevatedButton(
       onPressed: () {
         Navigator.of(context)
             .push(new MaterialPageRoute(builder: (context) => SQLDemo()));
       },
       child: Text("SQLite"),
+    );
+  }
+}
+
+class _Path extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context)
+            .push(new MaterialPageRoute(builder: (context) => PathExample()));
+      },
+      child: Text("path"),
     );
   }
 }

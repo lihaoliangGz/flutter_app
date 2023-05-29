@@ -31,14 +31,15 @@ dependencies:
   json_annotation: ^4.4.0
   build_runner: ^2.1.7
   flutter_svg: ^1.0.3
-#  flutter_seekbar:
-#    git: https://github.com/LiuC520/flutter_seekbar.git
+  #  flutter_seekbar:
+  #    git: https://github.com/LiuC520/flutter_seekbar.git
   pull_to_refresh: ^2.0.0
   fluttertoast: ^8.2.1
   image_picker: ^0.8.7+4
   shared_preferences: ^2.1.0
   sqflite: ^2.2.7
   permission_handler: 8.3.0
+  path: 1.8.2
 
 dev_dependencies:
   flutter_test:
