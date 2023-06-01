@@ -39,13 +39,14 @@ class _TapboxAState extends State<TapboxA> {
   }
 }
 
-//-----------------父widget管理widget的state--------------------
+//-------------------父 widget 管理 widget 的 state----------------------------
 class ParentWidget extends StatefulWidget {
+  const ParentWidget({super.key});
+
   @override
-  State<StatefulWidget> createState() {
-    return new _ParentWidgetState();
-  }
+  State<ParentWidget> createState() => _ParentWidgetState();
 }
+
 
 class _ParentWidgetState extends State<ParentWidget> {
   bool _active = false;
@@ -58,14 +59,23 @@ class _ParentWidgetState extends State<ParentWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return new TapboxC(active: _active, onChanged: _handleTapboxChanged);
+    return SizedBox(
+      child: TapboxB(
+        active: _active,
+        onChanged: _handleTapboxChanged,
+      ),
+    );
   }
 }
 
-//-----tapboxB------
+//------------------------- TapboxB ----------------------------------
+
 class TapboxB extends StatelessWidget {
-  TapboxB({required Key key, this.active = false, required this.onChanged})
-      : super(key: key);
+  const TapboxB({
+    super.key,
+    this.active = false,
+    required this.onChanged,
+  });
 
   final bool active;
   final ValueChanged<bool> onChanged;
@@ -76,38 +86,73 @@ class TapboxB extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new GestureDetector(
+    return GestureDetector(
       onTap: _handleTap,
-      child: new Container(
-        child: new Center(
-          child: new Text(
+      child: Container(
+        width: 200.0,
+        height: 200.0,
+        decoration: BoxDecoration(
+          color: active ? Colors.lightGreen[700] : Colors.grey[600],
+        ),
+        child: Center(
+          child: Text(
             active ? 'Active' : 'Inactive',
-            style: new TextStyle(fontSize: 32, color: Colors.white),
+            style: const TextStyle(fontSize: 32.0, color: Colors.white),
           ),
         ),
-        width: 200,
-        height: 200,
-        decoration: new BoxDecoration(
-            color: active ? Colors.lightGreen[700] : Colors.grey[600]),
       ),
     );
   }
 }
 
-//-----tapboxC-----
+//---------------------------- 混搭管理 ----------------------------
+class ParentWidget2 extends StatefulWidget {
+  const ParentWidget2({super.key});
+
+  @override
+  State<ParentWidget2> createState() => _ParentWidgetState2();
+}
+
+class _ParentWidgetState2 extends State<ParentWidget2> {
+  bool _active = false;
+
+  void _handleTapboxChanged(bool newValue) {
+    setState(() {
+      _active = newValue;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: TapboxC(
+        active: _active,
+        onChanged: _handleTapboxChanged,
+      ),
+    );
+  }
+}
+
+//----------------------------- TapboxC ------------------------------
+//在 TapboxC 示例中，点击时，盒子的周围会出现一个深绿色的边框。
+// 点击时，边框消失，盒子的颜色改变。
+// TapboxC 将其 _active 状态导出到其父 widget 中，但在内部管理其 _highlight 状态。
+// 这个例子有两个状态对象 _ParentWidgetState 和 _TapboxCState。
 class TapboxC extends StatefulWidget {
-  TapboxC({required this.active, required this.onChanged}) : super();
+  const TapboxC({
+    super.key,
+    this.active = false,
+    required this.onChanged,
+  });
 
   final bool active;
   final ValueChanged<bool> onChanged;
 
   @override
-  State<StatefulWidget> createState() {
-    return new TapboxCState();
-  }
+  State<TapboxC> createState() => _TapboxCState();
 }
 
-class TapboxCState extends State<TapboxC> {
+class _TapboxCState extends State<TapboxC> {
   bool _highlight = false;
 
   void _handleTapDown(TapDownDetails details) {
@@ -134,28 +179,28 @@ class TapboxCState extends State<TapboxC> {
 
   @override
   Widget build(BuildContext context) {
-    return new GestureDetector(
-      onTapDown: _handleTapDown,
-      // Handle the tap events in the order that
-      onTapUp: _handleTapUp,
-      // they occur: down, up, tap, cancel
+    // This example adds a green border on tap down.
+    // On tap up, the square changes to the opposite state.
+    return GestureDetector(
+      onTapDown: _handleTapDown, // Handle the tap events in the order that
+      onTapUp: _handleTapUp, // they occur: down, up, tap, cancel
       onTap: _handleTap,
       onTapCancel: _handleTapCancel,
-      child: new Container(
-        child: new Center(
-          child: new Text(widget.active ? 'Active' : 'Inactive',
-              style: new TextStyle(fontSize: 32.0, color: Colors.white)),
-        ),
+      child: Container(
         width: 200.0,
         height: 200.0,
-        decoration: new BoxDecoration(
+        decoration: BoxDecoration(
           color: widget.active ? Colors.lightGreen[700] : Colors.grey[600],
           border: _highlight
-              ? new Border.all(
-                  color: Color(0xFF00796B),
-                  width: 10.0,
-                )
+              ? Border.all(
+            color: Colors.teal[700]!,
+            width: 10.0,
+          )
               : null,
+        ),
+        child: Center(
+          child: Text(widget.active ? 'Active' : 'Inactive',
+              style: const TextStyle(fontSize: 32.0, color: Colors.white)),
         ),
       ),
     );
@@ -189,7 +234,15 @@ class StateManagerApp extends StatelessWidget {
           title: new Text("状态管理"),
         ),
         body: new Center(
-          child: new ParentWidget(),
+          child: Column(
+            children: [
+              TapboxA(),
+              SizedBox(height: 20),
+              ParentWidget(),
+              SizedBox(height: 20),
+              ParentWidget2(),
+            ],
+          ),
         ),
       ),
     );
