@@ -21,6 +21,7 @@ import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
+import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/material/material_design_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
@@ -514,6 +515,21 @@ class Reload extends StatelessWidget {
   }
 }
 
+class Constraints extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LayoutConstraintExample()),
+        );
+      },
+      child: Text("约束"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -601,6 +617,7 @@ class MainPage extends StatelessWidget {
         MaterialDesign(),
         StatusBar(),
         Reload(),
+        Constraints(),
         Other(),
         //===========footer============
         DebugPaint()
