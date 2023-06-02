@@ -25,24 +25,29 @@ class OverlayExample extends BaseStatelessApp {
   void _createHighLightOverlay() {
     _overlayEntry = OverlayEntry(
       builder: (context) {
-        return SafeArea(
-          //使用DefaultTextStyle, 弥补没有Scaffold的问题,不然文本底部会出现双划线
-          child: DefaultTextStyle(
-            style: TextStyle(
-              color: Colors.blue,
-              fontWeight: FontWeight.bold,
-              fontSize: 14.0,
-            ),
-            child: GestureDetector(
-              onTap: () {
-                _removeHighLightOverlay();
-              },
-              child: Container(
-                color: Colors.black12,
-                width: 200,
-                height: 100,
-                child: Center(
-                  child: Text("float dialog"),
+        return Positioned(
+          top: 30,
+          left: 50,
+          right: 50,
+          child: SafeArea(
+            //使用DefaultTextStyle, 弥补没有Scaffold的问题,不然文本底部会出现双划线
+            child: DefaultTextStyle(
+              style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
+                fontSize: 14.0,
+              ),
+              child: GestureDetector(
+                onTap: () {
+                  _removeHighLightOverlay();
+                },
+                child: Container(
+                  color: Colors.black12,
+                  width: 200,
+                  height: 100,
+                  child: Center(
+                    child: Text("float dialog"),
+                  ),
                 ),
               ),
             ),
