@@ -3,6 +3,7 @@ import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/MediaQueryPage.dart';
 import 'package:flutterapp/widgets/hero_example.dart';
 import 'package:flutterapp/widgets/icon_page.dart';
+import 'package:flutterapp/widgets/overlay_example.dart';
 
 class OtherApp extends BaseStatelessApp {
   @override
@@ -33,6 +34,15 @@ class OtherApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => HeroExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("Overlay"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => OverlayExample()),
             );
           },
         ),
