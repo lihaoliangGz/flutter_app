@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/clip/clip_app.dart';
+import 'package:flutterapp/widgets/cupertino/cupertino_widgets_app.dart';
 import 'package:flutterapp/widgets/materialwidget/material_component_widget_app.dart';
 import 'package:flutterapp/widgets/other_app.dart';
 import 'package:flutterapp/widgets/text_widgets/text_widgets_app.dart';
@@ -54,6 +55,15 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => OtherApp()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("iOS 风格 widgets 列表"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CupertinoWidgetsApp()),
             );
           },
         ),
