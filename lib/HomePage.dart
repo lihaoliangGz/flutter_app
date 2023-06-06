@@ -22,7 +22,6 @@ import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
-import 'package:flutterapp/material/material_design_app.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
@@ -455,21 +454,6 @@ class Permission extends StatelessWidget {
   }
 }
 
-class MaterialDesign extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => MaterialDesignApp()),
-        );
-      },
-      child: Text("Material Design"),
-    );
-  }
-}
-
 class StatusBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -614,7 +598,6 @@ class MainPage extends StatelessWidget {
         ForAndroid(),
         FlutterPlugin(),
         Permission(),
-        MaterialDesign(),
         StatusBar(),
         Reload(),
         Constraints(),
