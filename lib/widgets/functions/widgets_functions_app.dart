@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/material/functions/show_dialog_example.dart';
+import 'package:flutterapp/widgets/functions/show_general_dialog_example.dart';
 
-class MaterialFunctionsApp extends BaseStatelessApp {
+class WidgetsFunctionsApp extends BaseStatelessApp {
   @override
   Widget getBody() {
     return ListView(
       children: [
         ListTile(
-          title: Text("showDialog"),
+          title: Text("showGeneralDialog"),
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ShowDialogExample()),
+              MaterialPageRoute(
+                builder: (context) => ShowGeneralDialogExample(),
+              ),
             );
           },
         ),
@@ -22,6 +24,6 @@ class MaterialFunctionsApp extends BaseStatelessApp {
 
   @override
   String getTitle() {
-    return 'Material Functions';
+    return "Widgets Functions";
   }
 }

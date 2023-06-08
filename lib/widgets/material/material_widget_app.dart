@@ -113,7 +113,7 @@ class MaterialWidgetApp extends BaseStatelessApp {
           child: Text("FUNCTIONS"),
         ),
         ListTile(
-          title: Text("functions"),
+          title: Text("material functions"),
           onTap: () {
             Navigator.push(
               context,
