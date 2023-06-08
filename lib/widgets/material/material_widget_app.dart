@@ -7,6 +7,7 @@ import 'package:flutterapp/widgets/material/elevated_button_page.dart';
 import 'package:flutterapp/widgets/material/functions/material_functions_app.dart';
 import 'package:flutterapp/widgets/material/material_app_page.dart';
 import 'package:flutterapp/widgets/material/outlined_button_page.dart';
+import 'package:flutterapp/widgets/material/switch_example.dart';
 import 'package:flutterapp/widgets/material/text_field_page.dart';
 
 class MaterialWidgetApp extends BaseStatelessApp {
@@ -69,7 +70,16 @@ class MaterialWidgetApp extends BaseStatelessApp {
           height: 60,
           color: Color(0XFFCCCCCC),
           alignment: AlignmentDirectional.centerStart,
-          child: Text("Input and selections"),
+          child: Text("Selection"),
+        ),
+        ListTile(
+          title: Text("Switch"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SwitchExample()),
+            );
+          },
         ),
         ListTile(
           title: Text("TextField"),
