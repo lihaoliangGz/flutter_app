@@ -26,10 +26,11 @@ import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/reload_page.dart';
+import 'package:flutterapp/route/route_example_app.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/temp/temp_app.dart';
-import 'package:flutterapp/test_debug/TestDebugApp.dart';
+import 'package:flutterapp/test_debug/test_debug_app.dart';
 
 import 'TabBarApp.dart';
 import 'widgets/widgets_app.dart' as WidgetsApp;
@@ -514,6 +515,21 @@ class Constraints extends StatelessWidget {
   }
 }
 
+class Route extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => RouteExampleApp()),
+        );
+      },
+      child: Text("路由"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -601,6 +617,7 @@ class MainPage extends StatelessWidget {
         StatusBar(),
         Reload(),
         Constraints(),
+        Route(),
         Other(),
         //===========footer============
         DebugPaint()
