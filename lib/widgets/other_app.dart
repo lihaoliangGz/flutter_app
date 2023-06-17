@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widgets/MediaQueryPage.dart';
+import 'package:flutterapp/widgets/dismissible_example.dart';
 import 'package:flutterapp/widgets/hero_example.dart';
 import 'package:flutterapp/widgets/icon_page.dart';
 import 'package:flutterapp/widgets/overlay_example.dart';
@@ -43,6 +44,15 @@ class OtherApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => OverlayExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("Dismissible"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DismissibleExample()),
             );
           },
         ),

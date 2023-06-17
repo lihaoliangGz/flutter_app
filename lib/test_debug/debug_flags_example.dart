@@ -74,6 +74,16 @@ class _DebugFlagsState extends State<DebugFlagsExample> {
               },
               child: Text("debugRepaintRainbowEnabled"),
             ),
+            TextButton(
+              onPressed: () {
+                assert(() {
+                  // ...debug-only code here...
+                  print('仅在调试模式下才会执行');
+                  return true;
+                }());
+              },
+              child: Text("使用assert在调试模式下执行代码"),
+            ),
           ],
         ),
       ),
