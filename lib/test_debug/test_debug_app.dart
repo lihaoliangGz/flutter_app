@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/test_debug/debug_flags_example.dart';
 import 'package:flutterapp/test_debug/handle_error_page.dart';
 import 'package:flutterapp/test_debug/log_print_page.dart';
 
@@ -20,6 +21,13 @@ class TestDebugApp extends BaseStatelessApp {
           onTap: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => LogPrintPage()));
+          },
+        ),
+        ListTile(
+          title: Text("调试标志"),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => DebugFlagsExample()));
           },
         ),
       ],
