@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/material/app_bar_page.dart';
-import 'package:flutterapp/widgets/material/card_example.dart';
-import 'package:flutterapp/widgets/material/chip_example.dart';
-import 'package:flutterapp/widgets/material/elevated_button_page.dart';
-import 'package:flutterapp/widgets/material/functions/material_functions_app.dart';
-import 'package:flutterapp/widgets/material/material_app_page.dart';
-import 'package:flutterapp/widgets/material/outlined_button_page.dart';
-import 'package:flutterapp/widgets/material/switch_example.dart';
-import 'package:flutterapp/widgets/material/text_field_page.dart';
+import 'package:flutterapp/flutter_widget/material/app_bar_page.dart';
+import 'package:flutterapp/flutter_widget/material/card_example.dart';
+import 'package:flutterapp/flutter_widget/material/chip_example.dart';
+import 'package:flutterapp/flutter_widget/material/elevated_button_page.dart';
+import 'package:flutterapp/flutter_widget/material/functions/material_functions_app.dart';
+import 'package:flutterapp/flutter_widget/material/material_app_page.dart';
+import 'package:flutterapp/flutter_widget/material/outlined_button_page.dart';
+import 'package:flutterapp/flutter_widget/material/switch_example.dart';
+import 'package:flutterapp/flutter_widget/material/text_field_page.dart';
 
 class MaterialWidgetApp extends BaseStatelessApp {
   @override

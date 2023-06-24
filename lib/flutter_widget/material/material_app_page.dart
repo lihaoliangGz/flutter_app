@@ -7,6 +7,9 @@ class MaterialAppPage extends StatelessWidget {
     print("${queryData.size}");
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("MaterialApp"),
+        ),
         body: Text("MaterialAppPage"),
       ),
     );

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/MediaQueryPage.dart';
-import 'package:flutterapp/widgets/dismissible_example.dart';
-import 'package:flutterapp/widgets/hero_example.dart';
-import 'package:flutterapp/widgets/icon_page.dart';
-import 'package:flutterapp/widgets/overlay_example.dart';
+import 'package:flutterapp/flutter_widget/material/MediaQueryPage.dart';
+import 'package:flutterapp/flutter_widget/widgets/dismissible_example.dart';
+import 'package:flutterapp/flutter_widget/widgets/hero_example.dart';
+import 'package:flutterapp/flutter_widget/widgets/icon_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/overlay_example.dart';
 
 class OtherApp extends BaseStatelessApp {
   @override

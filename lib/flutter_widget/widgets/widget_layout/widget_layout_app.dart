@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterapp/widgets/widget_layout/column_page.dart';
-import 'package:flutterapp/widgets/widget_layout/expanded_page.dart';
-import 'package:flutterapp/widgets/widget_layout/gridview/grid_view_app.dart';
-import 'package:flutterapp/widgets/widget_layout/multi_list_view_page.dart';
-import 'package:flutterapp/widgets/widget_layout/row_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/column_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/expanded_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_view_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/multi_list_view_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/row_page.dart';
 
 import 'align_demo.dart';
 import 'aspect_ratio_demo.dart';

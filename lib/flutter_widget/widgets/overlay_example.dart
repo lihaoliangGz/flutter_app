@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/notification_widget.dart';
+import 'package:flutterapp/flutter_widget/widgets/notification_widget.dart';
 
 ///使用StatefulWidget管理状态会更好
 class OverlayExample extends BaseStatelessApp {

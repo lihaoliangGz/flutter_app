@@ -19,6 +19,7 @@ import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
@@ -33,7 +34,6 @@ import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/test_debug/test_debug_app.dart';
 
 import 'TabBarApp.dart';
-import 'widgets/widgets_app.dart' as WidgetsApp;
 
 class FirstFlutter extends StatelessWidget {
   @override
@@ -342,7 +342,7 @@ class Widgets extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => WidgetsApp.WidgetsApp()),
+          MaterialPageRoute(builder: (context) => FlutterWidgetApp()),
         );
       },
       child: Text('Widgets'),

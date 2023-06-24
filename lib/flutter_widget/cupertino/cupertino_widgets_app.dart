@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/functions/show_general_dialog_example.dart';
+import 'package:flutterapp/flutter_widget/cupertino/cupertino_picker_example.dart';
 
-class WidgetsFunctionsApp extends BaseStatelessApp {
+class CupertinoWidgetsApp extends BaseStatelessApp {
   @override
   Widget getBody() {
     return ListView(
       children: [
         ListTile(
-          title: Text("showGeneralDialog"),
+          title: Text("CupertinoPicker"),
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(
-                builder: (context) => ShowGeneralDialogExample(),
-              ),
+              MaterialPageRoute(builder: (context) => CupertinoPickerExample()),
             );
           },
         ),
@@ -24,6 +22,6 @@ class WidgetsFunctionsApp extends BaseStatelessApp {
 
   @override
   String getTitle() {
-    return "Widgets Functions";
+    return "iOS 风格 widgets 列表";
   }
 }

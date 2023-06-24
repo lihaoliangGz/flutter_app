@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/widget_layout/gridview/grid_view_count_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_view_count_page.dart';
 
 class GridViewApp extends BaseStatelessApp {
   @override

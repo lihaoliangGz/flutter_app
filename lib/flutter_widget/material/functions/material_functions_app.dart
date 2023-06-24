@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/material/functions/show_dialog_example.dart';
+import 'package:flutterapp/flutter_widget/material/functions/show_dialog_example.dart';
 
 class MaterialFunctionsApp extends BaseStatelessApp {
   @override

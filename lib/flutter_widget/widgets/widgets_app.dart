@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/clip/clip_app.dart';
-import 'package:flutterapp/widgets/cupertino/cupertino_widgets_app.dart';
-import 'package:flutterapp/widgets/functions/widgets_functions_app.dart';
-import 'package:flutterapp/widgets/material/material_widget_app.dart';
-import 'package:flutterapp/widgets/other_app.dart';
-import 'package:flutterapp/widgets/text_widgets/text_widgets_app.dart';
-import 'package:flutterapp/widgets/widget_layout/widget_layout_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/clip/clip_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/functions/widgets_functions_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/other_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/text_widgets/text_widgets_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/widget_layout_app.dart';
 
 class WidgetsApp extends BaseStatelessApp {
   @override
@@ -46,24 +44,6 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => OtherApp()),
-            );
-          },
-        ),
-        ListTile(
-          title: Text("Material"),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => MaterialWidgetApp()),
-            );
-          },
-        ),
-        ListTile(
-          title: Text("iOS 风格 widgets 列表"),
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => CupertinoWidgetsApp()),
             );
           },
         ),

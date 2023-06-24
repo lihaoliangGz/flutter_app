@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
-import 'package:flutterapp/widgets/clip/clip_oval_page.dart';
-import 'package:flutterapp/widgets/clip/clip_rect_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/clip/clip_oval_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/clip/clip_rect_page.dart';
 
 import 'clip_path_page.dart';
 
