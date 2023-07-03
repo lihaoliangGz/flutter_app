@@ -8,7 +8,6 @@ import 'package:flutterapp/ImagesApp.dart';
 import 'package:flutterapp/JsonSerializableApp.dart';
 import 'package:flutterapp/LayoutApp.dart';
 import 'package:flutterapp/LayoutMethodApp.dart';
-import 'package:flutterapp/NavigatorApp.dart';
 import 'package:flutterapp/PlatformChannelApp.dart';
 import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
@@ -20,11 +19,11 @@ import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
+import 'package:flutterapp/navigation_routing/navigation_and_routing_app.dart';
 import 'package:flutterapp/network/network_page.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/reload_page.dart';
-import 'package:flutterapp/route/route_example_app.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/test_debug/test_debug_app.dart';
@@ -181,17 +180,17 @@ class LayoutMethod extends StatelessWidget {
   }
 }
 
-class NavigatorItem extends StatelessWidget {
+class NavigationAndRoutingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NavigatorApp()),
+          MaterialPageRoute(builder: (context) => NavigationAndRoutingApp()),
         );
       },
-      child: Text('导航'),
+      child: Text('路由和导航'),
     );
   }
 }
@@ -451,21 +450,6 @@ class Constraints extends StatelessWidget {
   }
 }
 
-class Route extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => RouteExampleApp()),
-        );
-      },
-      child: Text("路由"),
-    );
-  }
-}
-
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -533,7 +517,7 @@ class MainPage extends StatelessWidget {
         JsonSerializable(),
         Layout(),
         LayoutMethod(),
-        NavigatorItem(),
+        NavigationAndRoutingItem(),
         Network(),
         PlatformChannel(),
         StateManager(),
@@ -549,7 +533,6 @@ class MainPage extends StatelessWidget {
         StatusBar(),
         Reload(),
         Constraints(),
-        Route(),
         Other(),
         //===========footer============
         DebugPaint()

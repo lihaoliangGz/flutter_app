@@ -168,7 +168,7 @@ class SelectionScreen extends StatelessWidget {
   }
 }
 
-class NavigatorApp extends StatelessWidget {
+class NavigationAndRoutingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = "导航到新页面并返回";
