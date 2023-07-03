@@ -22,7 +22,6 @@ import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/network/network_page.dart';
 import 'package:flutterapp/other_demo.dart';
-import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/reload_page.dart';
 import 'package:flutterapp/route/route_example_app.dart';
@@ -392,21 +391,6 @@ class FlutterPlugin extends StatelessWidget {
   }
 }
 
-class Permission extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => PermissionDemo()),
-        );
-      },
-      child: Text("权限"),
-    );
-  }
-}
-
 class StatusBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -562,7 +546,6 @@ class MainPage extends StatelessWidget {
         Debug(),
         ForAndroid(),
         FlutterPlugin(),
-        Permission(),
         StatusBar(),
         Reload(),
         Constraints(),

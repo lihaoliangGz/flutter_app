@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/plugin/flutter_svg_example.dart';
 import 'package:flutterapp/plugin/image_picker_demo.dart';
 import 'package:flutterapp/plugin/path_example.dart';
+import 'package:flutterapp/plugin/permission_handler_example.dart';
 import 'package:flutterapp/plugin/shared_preference_demo.dart';
 import 'package:flutterapp/plugin/sql_demo.dart';
 
@@ -19,6 +20,7 @@ class FlutterPluginDemo extends StatelessWidget {
           _SQL(),
           _Path(),
           _FlutterSvg(),
+          _PermissionHandler(),
         ],
       ),
     );
@@ -86,6 +88,19 @@ class _FlutterSvg extends StatelessWidget {
             new MaterialPageRoute(builder: (context) => FlutterSvgExample()));
       },
       child: Text("flutter_svg"),
+    );
+  }
+}
+
+class _PermissionHandler extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context).push(new MaterialPageRoute(
+            builder: (context) => PermissionHandlerExample()));
+      },
+      child: Text("permission_handler"),
     );
   }
 }
