@@ -9,8 +9,6 @@ import 'package:flutterapp/JsonSerializableApp.dart';
 import 'package:flutterapp/LayoutApp.dart';
 import 'package:flutterapp/LayoutMethodApp.dart';
 import 'package:flutterapp/NavigatorApp.dart';
-import 'package:flutterapp/NetworkApp.dart';
-import 'package:flutterapp/NetworkHttpApp.dart';
 import 'package:flutterapp/PlatformChannelApp.dart';
 import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
@@ -23,6 +21,7 @@ import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
+import 'package:flutterapp/network/network_page.dart';
 import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/permission_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin.dart';
@@ -207,25 +206,10 @@ class Network extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => NetworkApp()),
+          MaterialPageRoute(builder: (context) => NetworkPage()),
         );
       },
       child: Text('网络'),
-    );
-  }
-}
-
-class NetworkHttp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => NetworkHttpApp()),
-        );
-      },
-      child: Text('网络和Http'),
     );
   }
 }
@@ -599,7 +583,6 @@ class MainPage extends StatelessWidget {
         LayoutMethod(),
         NavigatorItem(),
         Network(),
-        NetworkHttp(),
         PlatformChannel(),
         StateManager(),
         TextInput(),
