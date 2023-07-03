@@ -13,7 +13,6 @@ import 'package:flutterapp/PlatformChannelApp.dart';
 import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
 import 'package:flutterapp/ThemeApp.dart';
-import 'package:flutterapp/UrlLauncherApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
@@ -270,21 +269,6 @@ class CustomTheme extends StatelessWidget {
         );
       },
       child: Text('自定义主题'),
-    );
-  }
-}
-
-class UrlLauncher extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => UrlLauncherApp()),
-        );
-      },
-      child: Text('启动浏览器'),
     );
   }
 }
@@ -587,7 +571,6 @@ class MainPage extends StatelessWidget {
         StateManager(),
         TextInput(),
         CustomTheme(),
-        UrlLauncher(),
         WidgetFramework(),
         Animation(),
         TabBar(),
