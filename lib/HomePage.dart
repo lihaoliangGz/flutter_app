@@ -27,7 +27,6 @@ import 'package:flutterapp/plugin/flutter_plugin.dart';
 import 'package:flutterapp/reload_page.dart';
 import 'package:flutterapp/route/route_example_app.dart';
 import 'package:flutterapp/status_bar_page.dart';
-import 'package:flutterapp/svg_app.dart';
 import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/test_debug/test_debug_app.dart';
 
@@ -333,21 +332,6 @@ class TabBar extends StatelessWidget {
   }
 }
 
-class Svg extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SvgApp()),
-        );
-      },
-      child: Text('Svg'),
-    );
-  }
-}
-
 class Temp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -574,7 +558,6 @@ class MainPage extends StatelessWidget {
         WidgetFramework(),
         Animation(),
         TabBar(),
-        Svg(),
         Temp(),
         Debug(),
         ForAndroid(),
