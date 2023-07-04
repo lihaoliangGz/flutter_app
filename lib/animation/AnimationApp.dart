@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/animation/animated_container_example.dart';
+import 'package:flutterapp/animation/animated_opacity_example.dart';
 
 // ============ animation1=================
 class LogoApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _LogoAppState();
+    return _LogoAppState();
   }
 }
 
@@ -15,9 +17,9 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    controller = new AnimationController(
+    controller = AnimationController(
         duration: const Duration(milliseconds: 2000), vsync: this);
-    animation = new Tween(begin: 0.0, end: 300.0).animate(controller)
+    animation = Tween(begin: 0.0, end: 300.0).animate(controller)
       ..addListener(() {
         setState(() {});
       })
@@ -34,13 +36,13 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return new Material(
-      child: new Center(
+    return Material(
+      child: Center(
         child: Container(
-          margin: new EdgeInsets.symmetric(vertical: 10),
+          margin: EdgeInsets.symmetric(vertical: 10),
           height: animation.value,
           width: animation.value,
-          child: new FlutterLogo(),
+          child: FlutterLogo(),
         ),
       ),
     );
@@ -57,9 +59,9 @@ class _LogoAppState extends State<LogoApp> with SingleTickerProviderStateMixin {
 class LogoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new Container(
-      margin: new EdgeInsets.symmetric(vertical: 10),
-      child: new FlutterLogo(),
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 10),
+      child: FlutterLogo(),
     );
   }
 }
@@ -72,12 +74,12 @@ class GrowTransition extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new Material(
-      child: new Center(
-          child: new AnimatedBuilder(
+    return Material(
+      child: Center(
+          child: AnimatedBuilder(
         animation: animation,
         builder: (BuildContext context, Widget? child) {
-          return new Container(
+          return Container(
             height: animation.value,
             width: animation.value,
             child: child,
@@ -92,7 +94,7 @@ class GrowTransition extends StatelessWidget {
 class LogoApp2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _LogoAppState2();
+    return _LogoAppState2();
   }
 }
 
@@ -102,16 +104,16 @@ class _LogoAppState2 extends State<LogoApp2> with TickerProviderStateMixin {
 
   initState() {
     super.initState();
-    controller = new AnimationController(
+    controller = AnimationController(
         duration: const Duration(milliseconds: 2000), vsync: this);
     final CurvedAnimation curve =
-        new CurvedAnimation(parent: controller, curve: Curves.easeIn);
-    animation = new Tween(begin: 0.0, end: 300.0).animate(curve);
+        CurvedAnimation(parent: controller, curve: Curves.easeIn);
+    animation = Tween(begin: 0.0, end: 300.0).animate(curve);
     controller.forward();
   }
 
   Widget build(BuildContext context) {
-    return new GrowTransition(child: new LogoWidget(), animation: animation);
+    return GrowTransition(child: LogoWidget(), animation: animation);
   }
 
   dispose() {
@@ -123,8 +125,8 @@ class _LogoAppState2 extends State<LogoApp2> with TickerProviderStateMixin {
 //============= 并行动画 ================
 class AnimatedLogo extends AnimatedWidget {
   // The Tweens are static because they don't change.
-  static final _opacityTween = new Tween<double>(begin: 0.1, end: 1.0);
-  static final _sizeTween = new Tween<double>(begin: 0.0, end: 300.0);
+  static final _opacityTween = Tween<double>(begin: 0.1, end: 1.0);
+  static final _sizeTween = Tween<double>(begin: 0.0, end: 300.0);
 
   AnimatedLogo({required Animation<double> animation})
       : super(listenable: animation);
@@ -132,18 +134,18 @@ class AnimatedLogo extends AnimatedWidget {
   Widget build(BuildContext context) {
     //TODO
     // final Animation<double> animation = listenable;
-    return new Material(
-      child: new Center(
-        // child: new Opacity(
-        //   opacity: _opacityTween.evaluate(animation),
-        //   child: new Container(
-        //     margin: new EdgeInsets.symmetric(vertical: 10.0),
-        //     height: _sizeTween.evaluate(animation),
-        //     width: _sizeTween.evaluate(animation),
-        //     child: new FlutterLogo(),
-        //   ),
-        // ),
-      ),
+    return Material(
+      child: Center(
+          // child:  Opacity(
+          //   opacity: _opacityTween.evaluate(animation),
+          //   child:  Container(
+          //     margin:  EdgeInsets.symmetric(vertical: 10.0),
+          //     height: _sizeTween.evaluate(animation),
+          //     width: _sizeTween.evaluate(animation),
+          //     child:  FlutterLogo(),
+          //   ),
+          // ),
+          ),
     );
   }
 }
@@ -151,7 +153,7 @@ class AnimatedLogo extends AnimatedWidget {
 class LogoApp3 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _LogoAppState3();
+    return _LogoAppState3();
   }
 }
 
@@ -161,9 +163,9 @@ class _LogoAppState3 extends State<LogoApp3> with TickerProviderStateMixin {
 
   initState() {
     super.initState();
-    controller = new AnimationController(
+    controller = AnimationController(
         duration: const Duration(milliseconds: 2000), vsync: this);
-    animation = new CurvedAnimation(parent: controller, curve: Curves.easeIn);
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeIn);
 
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
@@ -177,7 +179,7 @@ class _LogoAppState3 extends State<LogoApp3> with TickerProviderStateMixin {
   }
 
   Widget build(BuildContext context) {
-    return new AnimatedLogo(animation: animation);
+    return AnimatedLogo(animation: animation);
   }
 
   dispose() {
@@ -189,44 +191,62 @@ class _LogoAppState3 extends State<LogoApp3> with TickerProviderStateMixin {
 class AnimationApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text("Flutter中的动画"),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Flutter中的动画"),
         ),
-        body: new ListView(
+        body: ListView(
           children: <Widget>[
-            new Container(
+            Container(
               child: Text("https://flutterchina.club/animations/"),
-              padding: new EdgeInsets.symmetric(vertical: 10),
+              padding: EdgeInsets.symmetric(vertical: 10),
             ),
-            new ElevatedButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new LogoApp();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return LogoApp();
                 }));
               },
               child: Text("动画示例-Logo"),
             ),
-            new ElevatedButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
+                    .push(MaterialPageRoute(builder: (context) {
                   return LogoApp2();
                 }));
               },
               child: Text('用AnimatedBuilder重构'),
             ),
-            new ElevatedButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
+                    .push(MaterialPageRoute(builder: (context) {
                   return LogoApp3();
                 }));
               },
               child: Text('并行动画'),
-            )
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return AnimatedOpacityExample();
+                }));
+              },
+              child: Text('AnimatedOpacity'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return AnimatedContainerExample();
+                }));
+              },
+              child: Text('AnimatedContainer'),
+            ),
           ],
         ),
       ),

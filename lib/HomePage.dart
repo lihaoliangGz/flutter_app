@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutterapp/AnimationApp.dart';
+import 'package:flutterapp/animation/AnimationApp.dart';
 import 'package:flutterapp/CartApp.dart';
 import 'package:flutterapp/FirstFlutterApp.dart';
 import 'package:flutterapp/IOApp.dart';
