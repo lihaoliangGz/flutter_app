@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutterapp/animation/AnimationApp.dart';
 import 'package:flutterapp/CartApp.dart';
 import 'package:flutterapp/FirstFlutterApp.dart';
 import 'package:flutterapp/IOApp.dart';
@@ -13,6 +12,7 @@ import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
 import 'package:flutterapp/ThemeApp.dart';
 import 'package:flutterapp/WidgetFramework.dart';
+import 'package:flutterapp/animation/animation_app.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
