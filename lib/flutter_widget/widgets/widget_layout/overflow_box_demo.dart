@@ -5,12 +5,12 @@ class OverflowBoxDemo extends BaseStatelessApp {
   @override
   Widget getBody() {
     return Container(
-      color: Colors.red,
+      color: Colors.blue,
       padding: EdgeInsets.all(10),
       height: 200,
       width: 200,
       child: OverflowBox(
-        maxHeight: 250, //不能小于父容器的高度180
+        maxHeight: 250,
         child: Container(
           color: Colors.green,
           width: 100,
