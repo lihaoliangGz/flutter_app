@@ -10,8 +10,8 @@ class FittedBoxDemo extends BaseStatelessApp {
       height: 500,
       color: Colors.green[50],
       child: FittedBox(
-        fit: BoxFit.scaleDown,
-        //alignment:Alignment.topRight,
+        fit: BoxFit.contain,
+        alignment:Alignment.center,
         child: FlutterLogo(
           size: 60,
         ),

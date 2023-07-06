@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/column_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/custom_single_child_layout_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/expanded_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/fractionally_sized_box_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_view_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/multi_list_view_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/row_page.dart';
@@ -193,7 +194,18 @@ class WidgetLayoutApp extends StatelessWidget {
                 }));
               },
             ),
+            ListTile(
+              title: Text("FractionallySizedBox"),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return FractionallySizedBoxExample();
+                }));
+              },
+            ),
+
             //========================多个========================
+
             Container(
               child: Text("拥有多个子元素的布局widget"),
               alignment: AlignmentDirectional.center,

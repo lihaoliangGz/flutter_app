@@ -16,11 +16,11 @@ class BaselineDemo extends BaseStatelessApp {
           ),
         ),
         Baseline(
-          baseline: 100,
+          baseline: 50,
           baselineType: TextBaseline.alphabetic,
           child: Text(
             "World",
-            style: TextStyle(fontSize: 80),
+            style: TextStyle(fontSize: 20),
           ),
         )
       ],
