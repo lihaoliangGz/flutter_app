@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
 class AspectRatioDemo extends BaseStatelessApp {
   @override
   Widget getBody() {
     return Container(
-      height: 200,
-      color: Colors.green[50],
+      height: 100,
+      width: double.infinity,
+      alignment: Alignment.center,
+      color: Colors.green,
       child: AspectRatio(
-        aspectRatio: 1,
+        aspectRatio: 16 / 9,
         child: Container(
-          color: Colors.red,
+          color: Colors.blue,
         ),
       ),
     );
