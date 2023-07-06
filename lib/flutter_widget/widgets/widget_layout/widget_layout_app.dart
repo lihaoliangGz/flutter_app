@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/column_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/custom_single_child_layout_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/expanded_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_view_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/multi_list_view_page.dart';
@@ -26,190 +27,199 @@ import 'transform_demo.dart';
 class WidgetLayoutApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      home: new Scaffold(
+    return MaterialApp(
+      home: Scaffold(
         appBar: AppBar(
           title: Text("layout"),
         ),
-        body: new ListView(
+        body: ListView(
           children: <Widget>[
-            new Container(
-              child: new Text("拥有单个子元素的布局widget"),
+            Container(
+              child: Text("拥有单个子元素的布局widget"),
               alignment: AlignmentDirectional.center,
-              padding: new EdgeInsets.symmetric(vertical: 13),
-              decoration: new BoxDecoration(color: Colors.grey[300]),
+              padding: EdgeInsets.symmetric(vertical: 13),
+              decoration: BoxDecoration(color: Colors.grey[300]),
             ),
-            new ListTile(
-              title: new Text("Container"),
+            ListTile(
+              title: Text("Container"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new ContainerDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return ContainerDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Padding"),
+            ListTile(
+              title: Text("Padding"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new PaddingDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return PaddingDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Center"),
+            ListTile(
+              title: Text("Center"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new CenterDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return CenterDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Align"),
+            ListTile(
+              title: Text("Align"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new AlignDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return AlignDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("FittedBox"),
+            ListTile(
+              title: Text("FittedBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new FittedBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return FittedBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("AspectRatio"),
+            ListTile(
+              title: Text("AspectRatio"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new AspectRatioDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return AspectRatioDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("ConstrainedBox"),
+            ListTile(
+              title: Text("ConstrainedBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new ConstrainedBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return ConstrainedBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("baseline"),
+            ListTile(
+              title: Text("baseline"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new BaselineDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return BaselineDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("IntrinsicHeight"),
+            ListTile(
+              title: Text("IntrinsicHeight"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new IntrinsicHeightDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return IntrinsicHeightDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("LimitedBox"),
+            ListTile(
+              title: Text("LimitedBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new LimitedBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return LimitedBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Offstage"),
+            ListTile(
+              title: Text("Offstage"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new OffStagePage();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return OffStagePage();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("OverflowBox"),
+            ListTile(
+              title: Text("OverflowBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new OverflowBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return OverflowBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("SizedBox"),
+            ListTile(
+              title: Text("SizedBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new SizedBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return SizedBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("SizedOverflowBox"),
+            ListTile(
+              title: Text("SizedOverflowBox"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new SizedOverflowBoxDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return SizedOverflowBoxDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Transform"),
+            ListTile(
+              title: Text("Transform"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new TransformDemo();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return TransformDemo();
                 }));
               },
             ),
-            new ListTile(
-              title: new Text("Expanded"),
+            ListTile(
+              title: Text("Expanded"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
+                    .push(MaterialPageRoute(builder: (context) {
                   return ExpandedPage();
                 }));
               },
             ),
-            //========================多个========================
-            new Container(
-              child: new Text("拥有多个子元素的布局widget"),
-              alignment: AlignmentDirectional.center,
-              padding: new EdgeInsets.symmetric(vertical: 13),
-              decoration: new BoxDecoration(color: Colors.grey[300]),
-            ),
-            new ListTile(
-              title: new Text("Stack"),
+            ListTile(
+              title: Text("CustomSingleChildLayout"),
               onTap: () {
                 Navigator.of(context)
-                    .push(new MaterialPageRoute(builder: (context) {
-                  return new StackPage();
+                    .push(MaterialPageRoute(builder: (context) {
+                  return CustomSingleChildLayoutExample();
+                }));
+              },
+            ),
+            //========================多个========================
+            Container(
+              child: Text("拥有多个子元素的布局widget"),
+              alignment: AlignmentDirectional.center,
+              padding: EdgeInsets.symmetric(vertical: 13),
+              decoration: BoxDecoration(color: Colors.grey[300]),
+            ),
+            ListTile(
+              title: Text("Stack"),
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return StackPage();
                 }));
               },
             ),
             ListTile(
               title: Text("ListView"),
               onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
-                    builder: (context) => ListViewPage()));
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ListViewPage()));
               },
             ),
             ListTile(
               title: Text("ListView多布局"),
               onTap: () {
-                Navigator.of(context).push(new MaterialPageRoute(
+                Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => MultiListViewPage()));
               },
             ),
@@ -217,21 +227,21 @@ class WidgetLayoutApp extends StatelessWidget {
               title: Text("GridView"),
               onTap: () {
                 Navigator.of(context).push(
-                    new MaterialPageRoute(builder: (context) => GridViewApp()));
+                    MaterialPageRoute(builder: (context) => GridViewApp()));
               },
             ),
             ListTile(
               title: Text("Row"),
               onTap: () {
-                Navigator.of(context).push(
-                    new MaterialPageRoute(builder: (context) => RowPage()));
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => RowPage()));
               },
             ),
             ListTile(
               title: Text("Column"),
               onTap: () {
                 Navigator.of(context).push(
-                    new MaterialPageRoute(builder: (context) => ColumnPage()));
+                    MaterialPageRoute(builder: (context) => ColumnPage()));
               },
             ),
           ],
