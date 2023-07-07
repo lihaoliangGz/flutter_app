@@ -7,6 +7,7 @@ import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_vi
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/layout_builder_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/multi_list_view_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/row_page.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/wrap_example.dart';
 
 import 'align_demo.dart';
 import 'aspect_ratio_demo.dart';
@@ -262,6 +263,13 @@ class WidgetLayoutApp extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => LayoutBuilderExample()));
+              },
+            ),
+            ListTile(
+              title: Text("Wrap"),
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => WrapExample()));
               },
             ),
           ],
