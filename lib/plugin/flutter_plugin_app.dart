@@ -6,7 +6,7 @@ import 'package:flutterapp/plugin/permission_handler_example.dart';
 import 'package:flutterapp/plugin/shared_preference_demo.dart';
 import 'package:flutterapp/plugin/sql_demo.dart';
 
-class FlutterPluginDemo extends StatelessWidget {
+class FlutterPluginApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

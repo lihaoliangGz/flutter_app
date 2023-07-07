@@ -22,7 +22,8 @@ import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/navigation_routing/navigation_and_routing_app.dart';
 import 'package:flutterapp/network/network_page.dart';
 import 'package:flutterapp/other_demo.dart';
-import 'package:flutterapp/plugin/flutter_plugin.dart';
+import 'package:flutterapp/plugin/flutter_plugin_app.dart';
+import 'package:flutterapp/plugin/minor/minor_plugin_app.dart';
 import 'package:flutterapp/reload_page.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/temp/temp_app.dart';
@@ -382,10 +383,25 @@ class FlutterPlugin extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FlutterPluginDemo()),
+          MaterialPageRoute(builder: (context) => FlutterPluginApp()),
         );
       },
       child: Text('Flutter 插件'),
+    );
+  }
+}
+
+class MinorPlugin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MinorPluginApp()),
+        );
+      },
+      child: Text('非主流插件'),
     );
   }
 }
@@ -510,6 +526,8 @@ class MainPage extends StatelessWidget {
         TestDebug(),
         Cart(),
         Widgets(),
+        FlutterPlugin(),
+        MinorPlugin(),
         FontsFamily(),
         Gesture(),
         Images(),
@@ -529,7 +547,6 @@ class MainPage extends StatelessWidget {
         Temp(),
         Debug(),
         ForAndroid(),
-        FlutterPlugin(),
         StatusBar(),
         Reload(),
         Constraints(),
