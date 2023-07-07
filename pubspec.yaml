@@ -43,6 +43,7 @@ dependencies:
   #  HTTP 请求库
   dio: 5.2.1
   device_information: 0.0.4
+  package_info_plus: 4.0.2
 
 dev_dependencies:
   flutter_test:
