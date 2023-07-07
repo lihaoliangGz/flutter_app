@@ -4,6 +4,7 @@ import 'package:flutterapp/flutter_widget/widgets/widget_layout/custom_single_ch
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/expanded_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/fractionally_sized_box_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/gridview/grid_view_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/widget_layout/layout_builder_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/multi_list_view_page.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/row_page.dart';
 
@@ -254,6 +255,13 @@ class WidgetLayoutApp extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => ColumnPage()));
+              },
+            ),
+            ListTile(
+              title: Text("LayoutBuilder"),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => LayoutBuilderExample()));
               },
             ),
           ],
