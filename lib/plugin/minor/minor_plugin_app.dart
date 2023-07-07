@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/plugin/minor/device_information_example.dart';
+import 'package:flutterapp/plugin/minor/toast_example.dart';
 
 class MinorPluginApp extends BaseStatelessApp {
   @override
@@ -8,6 +9,7 @@ class MinorPluginApp extends BaseStatelessApp {
     return ListView(
       children: <Widget>[
         _DeviceInformation(),
+        _Toast(),
       ],
     );
   }
@@ -27,6 +29,19 @@ class _DeviceInformation extends StatelessWidget {
             builder: (context) => DeviceInformationExample()));
       },
       child: Text("device_information"),
+    );
+  }
+}
+
+class _Toast extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context)
+            .push(new MaterialPageRoute(builder: (context) => ToastExample()));
+      },
+      child: Text("toast"),
     );
   }
 }
