@@ -6,7 +6,7 @@ import 'package:flutterapp/IOApp.dart';
 import 'package:flutterapp/ImagesApp.dart';
 import 'package:flutterapp/JsonSerializableApp.dart';
 import 'package:flutterapp/LayoutApp.dart';
-import 'package:flutterapp/LayoutMethodApp.dart';
+import 'package:flutterapp/in18_page.dart';
 import 'package:flutterapp/PlatformChannelApp.dart';
 import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
@@ -166,17 +166,17 @@ class Layout extends StatelessWidget {
   }
 }
 
-class LayoutMethod extends StatelessWidget {
+class In18 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => LayoutMethodApp()),
+          MaterialPageRoute(builder: (context) => In18Page()),
         );
       },
-      child: Text('Flutter的布局方法'),
+      child: Text('国际化'),
     );
   }
 }
@@ -534,8 +534,8 @@ class MainPage extends StatelessWidget {
         IO(),
         JsonSerializable(),
         Layout(),
-        LayoutMethod(),
         NavigationAndRoutingItem(),
+        In18(),
         Network(),
         PlatformChannel(),
         StateManager(),
