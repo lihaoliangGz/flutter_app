@@ -45,6 +45,6 @@ class FlutterWidgetApp extends BaseStatelessApp {
 
   @override
   String getTitle() {
-    return "Flutter";
+    return "Widgets";
   }
 }
