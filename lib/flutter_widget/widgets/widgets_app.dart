@@ -5,6 +5,7 @@ import 'package:flutterapp/flutter_widget/widgets/functions/widgets_functions_ap
 import 'package:flutterapp/flutter_widget/widgets/other_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/reuse_widget_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/text_widgets/text_widgets_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/touch_interactions/touch_interaction_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/backdrop_filter_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/widget_layout/widget_layout_app.dart';
 
@@ -55,6 +56,15 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => WidgetsFunctionsApp()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("Touch Interaction"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => TouchInteractionApp()),
             );
           },
         ),
