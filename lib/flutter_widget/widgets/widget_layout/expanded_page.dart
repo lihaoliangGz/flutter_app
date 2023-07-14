@@ -8,9 +8,9 @@ class ExpandedPage extends BaseStatelessApp {
     return Center(
       child: Column(
         children: [
-          Expanded(child: Image.asset(Assets.imagesIcon), flex: 2),
-          Expanded(child: Image.asset(Assets.imagesIcon)),
-          Expanded(child: Image.asset(Assets.imagesIcon))
+          Expanded(child: Image.asset(Assets.icon), flex: 2),
+          Expanded(child: Image.asset(Assets.icon)),
+          Expanded(child: Image.asset(Assets.icon))
         ],
       ),
     );

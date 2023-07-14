@@ -12,14 +12,14 @@ class ClipPathPage extends BaseStatelessApp {
             child: ClipPath(
               clipper: __MyPathClipper(),
               child: Image.asset(
-                Assets.imagesIcon,
+                Assets.icon,
               ),
             ),
           ),
           Center(
             child: ClipPath.shape(
               shape: CircleBorder(),
-              child: Image.asset(Assets.imagesIcon),
+              child: Image.asset(Assets.icon),
             ),
           ),
         ],

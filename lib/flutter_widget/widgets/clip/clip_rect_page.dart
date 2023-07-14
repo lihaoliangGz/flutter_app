@@ -14,7 +14,7 @@ class ClipRectPage extends BaseStatelessApp {
               alignment: Alignment.topLeft,
               heightFactor: 1,
               child: Image.asset(
-                Assets.imagesIcon,
+                Assets.icon,
               ),
             ),
           ),
@@ -23,20 +23,20 @@ class ClipRectPage extends BaseStatelessApp {
                 alignment: Alignment.topLeft,
                 heightFactor: 0.5,
                 child: Image.asset(
-                  Assets.imagesIcon,
+                  Assets.icon,
                 )),
           ),
           Align(
               alignment: Alignment.topLeft,
               heightFactor: 1,
               child: Image.asset(
-                Assets.imagesIcon,
+                Assets.icon,
               )),
           Align(
               alignment: Alignment.topLeft,
               heightFactor: 0.5,
               child: Image.asset(
-                Assets.imagesIcon,
+                Assets.icon,
               ))
         ],
       ),

@@ -10,7 +10,7 @@ class FlutterSvgExample extends BaseStatelessApp {
       child: Container(
         height: 100,
         child: SvgPicture.asset(
-          Assets.imagesIconSvg,
+          Assets.iconSvg,
           color: Color(0xff08BF64),
         ),
       ),

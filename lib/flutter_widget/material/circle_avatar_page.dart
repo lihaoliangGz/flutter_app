@@ -9,7 +9,7 @@ class CircleAvatarPage extends BaseStatelessApp {
       child: CircleAvatar(
         foregroundColor: Colors.amber,
         child: Text("Av"),
-        backgroundImage: AssetImage(Assets.imagesIcon),
+        backgroundImage: AssetImage(Assets.icon),
         //foregroundImage: AssetImage(Assets.imagesIcon),
         //radius: 100,
         //maxRadius: 50,

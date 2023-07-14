@@ -115,3 +115,4 @@ flutter:
 flutter_assets_generator:
   output_dir: assets
   output_filename: assets
+  named_with_parent: false

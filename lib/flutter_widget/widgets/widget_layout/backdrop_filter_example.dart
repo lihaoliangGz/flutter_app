@@ -43,7 +43,7 @@ class BackdropFilterExample extends BaseStatelessApp{
             height: 150,
             child: Stack(
               children: <Widget>[
-                Positioned.fill(child: Image.asset(Assets.imagesIcon)),
+                Positioned.fill(child: Image.asset(Assets.icon)),
                 Positioned.fill(
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
@@ -58,7 +58,7 @@ class BackdropFilterExample extends BaseStatelessApp{
             height: 150,
             child: ImageFiltered(
               imageFilter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-              child: Image.asset(Assets.imagesIcon),
+              child: Image.asset(Assets.icon),
             ),
           )
         ],

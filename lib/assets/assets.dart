@@ -2,25 +2,25 @@
 class Assets {
   Assets._();
 
-  static const String images1589447933 = 'images/1589447933.png';
-  static const String images1589447958 = 'images/1589447958.png';
-  static const String images1589447970 = 'images/1589447970.png';
-  static const String imagesCart = 'images/cart.png';
-  static const String imagesCartSelected = 'images/cart_selected.png';
-  static const String imagesCategory = 'images/category.png';
-  static const String imagesCategorySelected = 'images/category_selected.png';
-  static const String imagesDefIconLoadNodata = 'images/def_icon_load_nodata.png';
-  static const String imagesHaitan = 'images/haitan.jpg';
-  static const String imagesHome = 'images/home.png';
-  static const String imagesHomeSelected = 'images/home_selected.png';
-  static const String imagesIcon = 'images/icon.jpg';
-  static const String imagesIconGoodsEmptyPlaceholder = 'images/icon_goods_empty_placeholder.png';
-  static const String imagesIconSvg = 'images/icon_svg.svg';
-  static const String imagesLake = 'images/lake.png';
-  static const String imagesMine = 'images/mine.png';
-  static const String imagesMineSelected = 'images/mine_selected.png';
-  static const String imagesNight = 'images/night.jpg';
-  static const String imagesTimg = 'images/timg.jpg';
-  static const String imagesTwice = 'images/twice.jpg';
+  static const String cart = 'images/cart.png';
+  static const String cartSelected = 'images/cart_selected.png';
+  static const String category = 'images/category.png';
+  static const String categorySelected = 'images/category_selected.png';
+  static const String defIconLoadNodata = 'images/def_icon_load_nodata.png';
+  static const String haitan = 'images/haitan.jpg';
+  static const String home = 'images/home.png';
+  static const String homeSelected = 'images/home_selected.png';
+  static const String icon = 'images/icon.jpg';
+  static const String icon1 = 'images/icon1.png';
+  static const String icon2 = 'images/icon2.png';
+  static const String icon3 = 'images/icon3.png';
+  static const String iconGoodsEmptyPlaceholder = 'images/icon_goods_empty_placeholder.png';
+  static const String iconSvg = 'images/icon_svg.svg';
+  static const String lake = 'images/lake.png';
+  static const String mine = 'images/mine.png';
+  static const String mineSelected = 'images/mine_selected.png';
+  static const String night = 'images/night.jpg';
+  static const String timg = 'images/timg.jpg';
+  static const String twice = 'images/twice.jpg';
 
 }

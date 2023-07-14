@@ -8,7 +8,7 @@ class ClipOvalPage extends BaseStatelessApp {
     return Center(
       child: ClipOval(
         child: Image.asset(
-          Assets.imagesIcon,
+          Assets.icon,
           fit: BoxFit.cover,
           width: 100,
           height: 50,
