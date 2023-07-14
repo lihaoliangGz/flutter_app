@@ -3,7 +3,7 @@ import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 ///添加水波纹效果
-class RipplePage extends BaseStatelessApp {
+class InkwellExample extends BaseStatelessApp {
   @override
   Widget getBody() {
     return new InkWell(
@@ -22,6 +22,6 @@ class RipplePage extends BaseStatelessApp {
 
   @override
   String getTitle() {
-    return "水波纹";
+    return "InkWell";
   }
 }

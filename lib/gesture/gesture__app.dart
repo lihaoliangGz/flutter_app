@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/gesture/gesture_page.dart';
 import 'package:flutterapp/gesture/listener_widget_page.dart';
-import 'package:flutterapp/gesture/ripple_page.dart';
 import 'package:flutterapp/gesture/slide_page.dart';
 
 class GestureApp extends BaseStatelessApp {
@@ -22,13 +21,6 @@ class GestureApp extends BaseStatelessApp {
           onTap: () {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => SlidePage()));
-          },
-        ),
-        ListTile(
-          title: Text("水波纹效果"),
-          onTap: () {
-            Navigator.of(context)
-                .push(MaterialPageRoute(builder: (context) => RipplePage()));
           },
         ),
         ListTile(
