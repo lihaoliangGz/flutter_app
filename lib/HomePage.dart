@@ -562,6 +562,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(useMaterial3: true),
       builder: (context, widget) {
         Widget error = const Text('...rendering error...');
         if (widget is Scaffold || widget is Navigator) {

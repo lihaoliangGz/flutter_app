@@ -8,13 +8,11 @@ abstract class BaseStatelessApp extends StatelessWidget {
   Widget build(BuildContext context) {
     this.context = context;
     debugPaintSizeEnabled = false;
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(getTitle()),
-        ),
-        body: getBody(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(getTitle()),
       ),
+      body: getBody(),
     );
   }
 
