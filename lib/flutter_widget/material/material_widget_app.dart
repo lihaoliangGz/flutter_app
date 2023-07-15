@@ -6,6 +6,7 @@ import 'package:flutterapp/flutter_widget/material/chip_example.dart';
 import 'package:flutterapp/flutter_widget/material/elevated_button_page.dart';
 import 'package:flutterapp/flutter_widget/material/functions/material_functions_app.dart';
 import 'package:flutterapp/flutter_widget/material/ink_example.dart';
+import 'package:flutterapp/flutter_widget/material/ink_response_example.dart';
 import 'package:flutterapp/flutter_widget/material/inkwell_example.dart';
 import 'package:flutterapp/flutter_widget/material/material_app_page.dart';
 import 'package:flutterapp/flutter_widget/material/outlined_button_page.dart';
@@ -32,6 +33,15 @@ class MaterialWidgetApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => InkwellExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("InkResponse"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => InkResponseExample()),
             );
           },
         ),

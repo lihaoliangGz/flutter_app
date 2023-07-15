@@ -6,17 +6,32 @@ import 'package:fluttertoast/fluttertoast.dart';
 class InkwellExample extends BaseStatelessApp {
   @override
   Widget getBody() {
-    return new InkWell(
-      onTap: () {
-        final snackBar = new SnackBar(content: new Text("Tap"));
-        Fluttertoast.showToast(
-            msg: "Scaffold.of(context).showSnackBar(snackBar)");
-        // Scaffold.of(context).showSnackBar(snackBar);
-      },
-      child: new Container(
-        padding: new EdgeInsets.all(20),
-        child: new Text("Button"),
-      ),
+    return Column(
+      children: [
+        InkWell(
+          onTap: () {
+            Fluttertoast.showToast(
+                msg: "Scaffold.of(context).showSnackBar(snackBar)");
+          },
+          child: new Container(
+            padding: new EdgeInsets.all(20),
+            child: new Text("Button"),
+          ),
+        ),
+        const SizedBox(height: 20),
+        InkWell(
+          onTap: () {
+            Fluttertoast.showToast(
+                msg: "Scaffold.of(context).showSnackBar(snackBar)");
+          },
+          child: new Container(
+            padding: new EdgeInsets.all(5),
+            child: new Text("Button2"),
+          ),
+          //highlightColor: Colors.grey,
+          splashColor: Colors.yellow,
+        ),
+      ],
     );
   }
 
