@@ -12,6 +12,7 @@ import 'package:flutterapp/flutter_widget/material/inkwell_example.dart';
 import 'package:flutterapp/flutter_widget/material/material_app_page.dart';
 import 'package:flutterapp/flutter_widget/material/outlined_button_page.dart';
 import 'package:flutterapp/flutter_widget/material/switch_example.dart';
+import 'package:flutterapp/flutter_widget/material/text_button_example.dart';
 import 'package:flutterapp/flutter_widget/material/text_field_page.dart';
 
 class MaterialWidgetApp extends BaseStatelessApp {
@@ -84,6 +85,15 @@ class MaterialWidgetApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ElevatedButtonPage()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("TextButton"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => TextButtonExample()),
             );
           },
         ),

@@ -1,22 +1,19 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 
-class ElevatedButtonPage extends BaseStatelessApp {
+class TextButtonExample extends BaseStatelessApp {
   @override
   Widget getBody() {
     return Center(
       child: Column(
         children: [
-          ElevatedButton(
+          TextButton(
             onPressed: () {},
-            child: Text("ElevatedButton"),
-            autofocus: true,
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black26,
-                // padding: EdgeInsetsDirectional.all(30),
-                shadowColor: Colors.amberAccent),
+            child: Text("文本按钮"),
           ),
-          ElevatedButton.icon(
+          TextButton.icon(
             onPressed: () {},
             icon: Icon(Icons.ac_unit_sharp),
             label: Text('label'),
@@ -28,6 +25,6 @@ class ElevatedButtonPage extends BaseStatelessApp {
 
   @override
   String getTitle() {
-    return "ElevatedButton";
+    return 'TextButton';
   }
 }

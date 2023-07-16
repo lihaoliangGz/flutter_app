@@ -7,12 +7,15 @@ class OutlinedButtonPage extends BaseStatelessApp {
     return Center(
       child: Column(
         children: [
-          OutlinedButton(onPressed: () {}, child: Text("按钮")),
+          OutlinedButton(
+            onPressed: () {},
+            child: Text("按钮"),
+          ),
           OutlinedButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.account_circle_sharp),
-              label: Text("按钮2")),
-          TextButton(onPressed: () {}, child: Text("文本按钮"))
+            onPressed: () {},
+            icon: Icon(Icons.account_circle_sharp),
+            label: Text("按钮2"),
+          ),
         ],
       ),
     );
