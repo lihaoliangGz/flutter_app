@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/flutter_widget/material/app_bar_page.dart';
+import 'package:flutterapp/flutter_widget/material/button_style_example.dart';
 import 'package:flutterapp/flutter_widget/material/card_example.dart';
 import 'package:flutterapp/flutter_widget/material/chip_example.dart';
 import 'package:flutterapp/flutter_widget/material/elevated_button_page.dart';
+import 'package:flutterapp/flutter_widget/material/filled_button_example.dart';
 import 'package:flutterapp/flutter_widget/material/functions/material_functions_app.dart';
 import 'package:flutterapp/flutter_widget/material/icon_button_example.dart';
 import 'package:flutterapp/flutter_widget/material/ink_example.dart';
@@ -112,6 +114,24 @@ class MaterialWidgetApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => IconButtonExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("FilledButton"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => FilledButtonExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("ButtonStyle"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ButtonStyleExample()),
             );
           },
         ),
