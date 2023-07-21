@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/flutter_widget/material/page_view_example.dart';
+import 'package:flutterapp/flutter_widget/material/page_view_example2.dart';
 import 'package:flutterapp/flutter_widget/widgets/clip/clip_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/functions/widgets_functions_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/other_app.dart';
@@ -83,6 +85,24 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => ReuseWidgetExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("PageView"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PageViewExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("PageView - PageView.custom"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PageViewExample2()),
             );
           },
         ),
