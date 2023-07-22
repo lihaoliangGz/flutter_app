@@ -316,6 +316,21 @@ class Widgets extends StatelessWidget {
   }
 }
 
+class WidgetProperty extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => WidgetProperty()),
+        );
+      },
+      child: Text('Widget Property'),
+    );
+  }
+}
+
 class TabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -526,6 +541,7 @@ class MainPage extends StatelessWidget {
         TestDebug(),
         Cart(),
         Widgets(),
+        WidgetProperty(),
         FlutterPlugin(),
         MinorPlugin(),
         FontsFamily(),
