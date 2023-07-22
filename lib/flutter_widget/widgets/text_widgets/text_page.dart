@@ -39,7 +39,13 @@ class TextPage extends BaseStatelessApp {
               SizedBox(height: 10),
               SelectionContainer.disabled(child: Text('Non-selectable text')),
               SizedBox(height: 10),
-              Text('Selectable text'),
+              Text(
+                'Selectable text',
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.wavy
+                ),
+              ),
             ],
           ),
         )
