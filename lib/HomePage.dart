@@ -28,6 +28,7 @@ import 'package:flutterapp/reload_page.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/test_debug/test_debug_app.dart';
+import 'package:flutterapp/widget_property/widget_property_app.dart';
 
 import 'TabBarApp.dart';
 
@@ -323,7 +324,7 @@ class WidgetProperty extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => WidgetProperty()),
+          MaterialPageRoute(builder: (context) => WidgetPropertyApp()),
         );
       },
       child: Text('Widget Property'),

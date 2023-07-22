@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/widget_property/outline_border_example.dart';
 
-class WidgetProperty extends BaseStatelessApp{
+class WidgetPropertyApp extends BaseStatelessApp{
   @override
   Widget getBody() {
     return ListView(
