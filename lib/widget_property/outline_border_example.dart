@@ -9,6 +9,18 @@ class OutlineBorderExample extends BaseStatelessApp {
     return Center(
       child: Column(
         children: [
+          _buildWidget(
+            BeveledRectangleBorder(
+              side: BorderSide(color: Colors.greenAccent, width: 2),
+              borderRadius: BorderRadiusDirectional.circular(10),
+            ),
+          ),
+          _buildWidget(
+            ContinuousRectangleBorder(
+              side: BorderSide(color: Colors.greenAccent, width: 3),
+              borderRadius: BorderRadiusDirectional.circular(50),
+            ),
+          ),
           _buildWidget(CircleBorder()),
           _buildWidget(
             LinearBorder(
@@ -24,6 +36,16 @@ class OutlineBorderExample extends BaseStatelessApp {
             RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(5),
                 side: BorderSide()),
+          ),
+          _buildWidget(
+            StadiumBorder(
+              side: BorderSide(color: Colors.greenAccent, width: 2),
+            ),
+          ),
+          _buildWidget(
+            StarBorder(
+              side: BorderSide(color: Colors.greenAccent, width: 2),
+            ),
           ),
         ],
       ),
