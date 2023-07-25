@@ -44,7 +44,8 @@ class _LogoApp2State extends State<LogoApp2>
         children: [
           ListTile(
             title: Text(
-                '1. 使用 AnimatedWidget 帮助类（代替 addListener() 和 setState()）创建动画 widget'),
+                '1. 使用 AnimatedWidget 帮助类（代替 addListener() 和 setState()）创建动画 widget\n '
+                'AnimatedLogo 继承 AnimatedWidget'),
           ),
           SizedBox(height: 30),
         ],
