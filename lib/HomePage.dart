@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutterapp/CartApp.dart';
@@ -6,7 +8,6 @@ import 'package:flutterapp/IOApp.dart';
 import 'package:flutterapp/ImagesApp.dart';
 import 'package:flutterapp/JsonSerializableApp.dart';
 import 'package:flutterapp/LayoutApp.dart';
-import 'package:flutterapp/in18_page.dart';
 import 'package:flutterapp/PlatformChannelApp.dart';
 import 'package:flutterapp/StateManagerApp.dart';
 import 'package:flutterapp/TextInputApp.dart';
@@ -18,6 +19,7 @@ import 'package:flutterapp/debug_app.dart';
 import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
+import 'package:flutterapp/in18_page.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/navigation_routing/navigation_and_routing_app.dart';
 import 'package:flutterapp/network/network_page.dart';
@@ -535,42 +537,48 @@ class DebugPaintState extends State<DebugPaint> {
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        FirstFlutter(),
-        DartDemo(),
-        TestDebug(),
-        Cart(),
-        Widgets(),
-        WidgetProperty(),
-        FlutterPlugin(),
-        MinorPlugin(),
-        FontsFamily(),
-        Gesture(),
-        Images(),
-        IO(),
-        JsonSerializable(),
-        Layout(),
-        NavigationAndRoutingItem(),
-        In18(),
-        Network(),
-        PlatformChannel(),
-        StateManager(),
-        TextInput(),
-        CustomTheme(),
-        WidgetFramework(),
-        Animation(),
-        TabBar(),
-        Temp(),
-        Debug(),
-        ForAndroid(),
-        StatusBar(),
-        Reload(),
-        Constraints(),
-        Other(),
-        //===========footer============
-        DebugPaint()
-      ],
+    return WillPopScope(
+      onWillPop: () {
+        log('Exit', name: 'HomePage');
+        return Future.value(true);
+      },
+      child: ListView(
+        children: <Widget>[
+          FirstFlutter(),
+          DartDemo(),
+          TestDebug(),
+          Cart(),
+          Widgets(),
+          WidgetProperty(),
+          FlutterPlugin(),
+          MinorPlugin(),
+          FontsFamily(),
+          Gesture(),
+          Images(),
+          IO(),
+          JsonSerializable(),
+          Layout(),
+          NavigationAndRoutingItem(),
+          In18(),
+          Network(),
+          PlatformChannel(),
+          StateManager(),
+          TextInput(),
+          CustomTheme(),
+          WidgetFramework(),
+          Animation(),
+          TabBar(),
+          Temp(),
+          Debug(),
+          ForAndroid(),
+          StatusBar(),
+          Reload(),
+          Constraints(),
+          Other(),
+          //===========footer============
+          DebugPaint()
+        ],
+      ),
     );
   }
 }

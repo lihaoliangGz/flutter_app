@@ -48,6 +48,7 @@ dependencies:
   device_information: 0.0.4
   package_info_plus: 4.0.2
   toast: 0.3.0
+  get: 4.6.5
 
 dev_dependencies:
   flutter_test:
