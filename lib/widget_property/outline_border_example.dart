@@ -22,16 +22,16 @@ class OutlineBorderExample extends BaseStatelessApp {
             ),
           ),
           _buildWidget(CircleBorder()),
-          _buildWidget(
-            LinearBorder(
-              side: BorderSide(color: Colors.greenAccent, width: 6),
-              start: LinearBorderEdge(size: 1),
-              bottom: LinearBorderEdge(
-                size: 0.5,
-                alignment: 1,
-              ),
-            ),
-          ),
+          // _buildWidget(
+          //   LinearBorder(
+          //     side: BorderSide(color: Colors.greenAccent, width: 6),
+          //     start: LinearBorderEdge(size: 1),
+          //     bottom: LinearBorderEdge(
+          //       size: 0.5,
+          //       alignment: 1,
+          //     ),
+          //   ),
+          // ),
           _buildWidget(
             RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.circular(5),
