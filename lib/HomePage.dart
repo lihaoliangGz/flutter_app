@@ -27,6 +27,7 @@ import 'package:flutterapp/other_demo.dart';
 import 'package:flutterapp/plugin/flutter_plugin_app.dart';
 import 'package:flutterapp/plugin/minor/minor_plugin_app.dart';
 import 'package:flutterapp/reload_page.dart';
+import 'package:flutterapp/sound/sound_app.dart';
 import 'package:flutterapp/status_bar_page.dart';
 import 'package:flutterapp/temp/temp_app.dart';
 import 'package:flutterapp/test_debug/test_debug_app.dart';
@@ -484,6 +485,21 @@ class Constraints extends StatelessWidget {
   }
 }
 
+class Sound extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SoundApp()),
+        );
+      },
+      child: Text("录音"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -574,6 +590,7 @@ class MainPage extends StatelessWidget {
           StatusBar(),
           Reload(),
           Constraints(),
+          Sound(),
           Other(),
           //===========footer============
           DebugPaint()
