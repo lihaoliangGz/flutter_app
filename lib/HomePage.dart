@@ -16,6 +16,7 @@ import 'package:flutterapp/WidgetFramework.dart';
 import 'package:flutterapp/animation/animation_app.dart';
 import 'package:flutterapp/dart/dart_app.dart';
 import 'package:flutterapp/debug_app.dart';
+import 'package:flutterapp/flutter/flutter_app.dart';
 import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
@@ -61,6 +62,21 @@ class DartDemo extends StatelessWidget {
         );
       },
       child: Text("Dart"),
+    );
+  }
+}
+
+class FlutterDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => FlutterApp()),
+        );
+      },
+      child: Text("Flutter"),
     );
   }
 }
@@ -562,6 +578,7 @@ class MainPage extends StatelessWidget {
         children: <Widget>[
           FirstFlutter(),
           DartDemo(),
+          FlutterDemo(),
           TestDebug(),
           Cart(),
           Widgets(),
