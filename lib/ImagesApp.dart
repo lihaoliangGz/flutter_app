@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 const String temp =
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589622878280&di=9b95a332457e02034107fc2b23c91fc2&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg";
-
+    "https://img1.baidu.com/it/u=1890390320,3399874998&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800";
 ///加载网络上的图片
 class ImageDemo extends StatelessWidget {
   @override

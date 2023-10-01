@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/base/BaseStatelessApp.dart';
+import 'package:flutterapp/network/background_parse_json_example.dart';
 import 'package:flutterapp/network/dio_example.dart';
-import 'package:flutterapp/network/network_app.dart';
-import 'package:flutterapp/network/network_http_app.dart';
+import 'package:flutterapp/network/network_example.dart';
+import 'package:flutterapp/network/network_http_example.dart';
+import 'package:flutterapp/network/web_socket_example.dart';
 
 class NetworkPage extends BaseStatelessApp {
   @override
@@ -14,7 +16,7 @@ class NetworkPage extends BaseStatelessApp {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NetworkApp()),
+              MaterialPageRoute(builder: (context) => NetworkExample()),
             );
           },
         ),
@@ -33,6 +35,25 @@ class NetworkPage extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => DioExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("WebSockets 通信"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => WebSocketExample()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("在后台处理 JSON 数据解析"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => BackgroundParseJsonExample()),
             );
           },
         ),
