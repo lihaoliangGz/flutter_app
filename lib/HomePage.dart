@@ -25,6 +25,7 @@ import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/navigation_routing/navigation_and_routing_app.dart';
 import 'package:flutterapp/network/network_page.dart';
 import 'package:flutterapp/other_demo.dart';
+import 'package:flutterapp/persistence/persistence_page.dart';
 import 'package:flutterapp/plugin/flutter_plugin_app.dart';
 import 'package:flutterapp/plugin/minor/minor_plugin_app.dart';
 import 'package:flutterapp/reload_page.dart';
@@ -516,6 +517,21 @@ class Sound extends StatelessWidget {
   }
 }
 
+class Persistence extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PersistencePage()),
+        );
+      },
+      child: Text("持久化"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -608,6 +624,7 @@ class MainPage extends StatelessWidget {
           Reload(),
           Constraints(),
           Sound(),
+          Persistence(),
           Other(),
           //===========footer============
           DebugPaint()
