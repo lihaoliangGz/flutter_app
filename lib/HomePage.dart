@@ -21,6 +21,7 @@ import 'package:flutterapp/flutter_widget/flutter_widget_app.dart';
 import 'package:flutterapp/fonts_family_app.dart';
 import 'package:flutterapp/gesture/gesture__app.dart';
 import 'package:flutterapp/in18_page.dart';
+import 'package:flutterapp/in_app_purchase/purchase_example.dart';
 import 'package:flutterapp/layout_constraint_example.dart';
 import 'package:flutterapp/navigation_routing/navigation_and_routing_app.dart';
 import 'package:flutterapp/network/network_page.dart';
@@ -532,6 +533,21 @@ class Persistence extends StatelessWidget {
   }
 }
 
+class Purchase extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PurchaseExample()),
+        );
+      },
+      child: Text("内购"),
+    );
+  }
+}
+
 class Other extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -625,6 +641,7 @@ class MainPage extends StatelessWidget {
           Constraints(),
           Sound(),
           Persistence(),
+          Purchase(),
           Other(),
           //===========footer============
           DebugPaint()
