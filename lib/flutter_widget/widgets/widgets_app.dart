@@ -3,6 +3,7 @@ import 'package:flutterapp/base/BaseStatelessApp.dart';
 import 'package:flutterapp/flutter_widget/material/page_view_example.dart';
 import 'package:flutterapp/flutter_widget/material/page_view_example2.dart';
 import 'package:flutterapp/flutter_widget/widgets/clip/clip_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/custom_scroll_view/custom_scroll_view_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/functions/widgets_functions_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/other_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/reuse_widget_example.dart';
@@ -103,6 +104,15 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => PageViewExample2()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("CustomScrollView"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => CustomScrollViewApp()),
             );
           },
         ),
