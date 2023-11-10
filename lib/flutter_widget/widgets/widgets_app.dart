@@ -6,6 +6,7 @@ import 'package:flutterapp/flutter_widget/widgets/clip/clip_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/custom_scroll_view/custom_scroll_view_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/functions/widgets_functions_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/other_app.dart';
+import 'package:flutterapp/flutter_widget/widgets/repaint_boundary_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/reuse_widget_example.dart';
 import 'package:flutterapp/flutter_widget/widgets/text_widgets/text_widgets_app.dart';
 import 'package:flutterapp/flutter_widget/widgets/touch_interactions/touch_interaction_app.dart';
@@ -113,6 +114,15 @@ class WidgetsApp extends BaseStatelessApp {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => CustomScrollViewApp()),
+            );
+          },
+        ),
+        ListTile(
+          title: Text("RepaintBoundary"),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => RepaintBoundaryExample()),
             );
           },
         ),
