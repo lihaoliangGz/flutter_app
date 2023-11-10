@@ -428,21 +428,6 @@ class FlutterPlugin extends StatelessWidget {
   }
 }
 
-class MinorPlugin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => MinorPluginApp()),
-        );
-      },
-      child: Text('非主流插件'),
-    );
-  }
-}
-
 class StatusBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -616,7 +601,6 @@ class MainPage extends StatelessWidget {
           Widgets(),
           WidgetProperty(),
           FlutterPlugin(),
-          MinorPlugin(),
           FontsFamily(),
           Gesture(),
           Images(),

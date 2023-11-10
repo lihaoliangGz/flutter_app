@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterapp/plugin/flutter_svg_example.dart';
 import 'package:flutterapp/plugin/image_picker_demo.dart';
+import 'package:flutterapp/plugin/minor/minor_plugin_app.dart';
 import 'package:flutterapp/plugin/package_info_plus_example.dart';
 import 'package:flutterapp/plugin/path_example.dart';
 import 'package:flutterapp/plugin/permission_handler_example.dart';
@@ -23,6 +24,7 @@ class FlutterPluginApp extends StatelessWidget {
           _FlutterSvg(),
           _PermissionHandler(),
           _PackageInfoPlus(),
+          _MinorPlugin(),
         ],
       ),
     );
@@ -116,6 +118,21 @@ class _PackageInfoPlus extends StatelessWidget {
             builder: (context) => PackageInfoPlusExample()));
       },
       child: Text("package_info_plus"),
+    );
+  }
+}
+
+class _MinorPlugin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => MinorPluginApp()),
+        );
+      },
+      child: Text('非主流插件'),
     );
   }
 }
