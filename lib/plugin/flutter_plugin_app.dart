@@ -1,138 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:flutterapp/model/list_item_model.dart';
+import 'package:flutterapp/plugin/flutter_spinkit_example.dart';
 import 'package:flutterapp/plugin/flutter_svg_example.dart';
 import 'package:flutterapp/plugin/image_picker_demo.dart';
 import 'package:flutterapp/plugin/minor/minor_plugin_app.dart';
 import 'package:flutterapp/plugin/package_info_plus_example.dart';
 import 'package:flutterapp/plugin/path_example.dart';
 import 'package:flutterapp/plugin/permission_handler_example.dart';
+import 'package:flutterapp/plugin/rxdart_example.dart';
 import 'package:flutterapp/plugin/shared_preference_demo.dart';
 import 'package:flutterapp/plugin/sql_demo.dart';
 
 class FlutterPluginApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    List<ListItemModel> dataList = [
+      ListItemModel(
+        "image_picker",
+        ImagePickerDemo(),
+      ),
+      ListItemModel(
+        "shared_preferences",
+        SharedPreferenceDemo(),
+      ),
+      ListItemModel(
+        "SQLite",
+        SQLDemo(),
+      ),
+      ListItemModel(
+        "path",
+        PathExample(),
+      ),
+      ListItemModel(
+        "flutter_svg",
+        FlutterSvgExample(),
+      ),
+      ListItemModel(
+        "permission_handler",
+        PermissionHandlerExample(),
+      ),
+      ListItemModel(
+        "package_info_plus",
+        PackageInfoPlusExample(),
+      ),
+      ListItemModel(
+        "rxdart",
+        RxDartExample(),
+      ),
+      ListItemModel(
+        "flutter_spinkit",
+        FlutterSpinkitExample(),
+      ),
+      ListItemModel(
+        "非主流插件",
+        MinorPluginApp(),
+      ),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("flutter 插件"),
       ),
       body: ListView(
-        children: <Widget>[
-          _ImagePickerPlugin(),
-          _SharedPreference(),
-          _SQL(),
-          _Path(),
-          _FlutterSvg(),
-          _PermissionHandler(),
-          _PackageInfoPlus(),
-          _MinorPlugin(),
-        ],
+        children: List.generate(dataList.length, (index) {
+          return ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                new MaterialPageRoute(
+                  builder: (context) => dataList[index].widget,
+                ),
+              );
+            },
+            child: Text(dataList[index].title),
+          );
+        }),
       ),
-    );
-  }
-}
-
-class _ImagePickerPlugin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(
-            new MaterialPageRoute(builder: (context) => ImagePickerDemo()));
-      },
-      child: Text("image_picker"),
-    );
-  }
-}
-
-class _SharedPreference extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(new MaterialPageRoute(
-            builder: (context) => SharedPreferenceDemo()));
-      },
-      child: Text("shared_preferences"),
-    );
-  }
-}
-
-class _SQL extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context)
-            .push(new MaterialPageRoute(builder: (context) => SQLDemo()));
-      },
-      child: Text("SQLite"),
-    );
-  }
-}
-
-class _Path extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context)
-            .push(new MaterialPageRoute(builder: (context) => PathExample()));
-      },
-      child: Text("path"),
-    );
-  }
-}
-
-class _FlutterSvg extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(
-            new MaterialPageRoute(builder: (context) => FlutterSvgExample()));
-      },
-      child: Text("flutter_svg"),
-    );
-  }
-}
-
-class _PermissionHandler extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(new MaterialPageRoute(
-            builder: (context) => PermissionHandlerExample()));
-      },
-      child: Text("permission_handler"),
-    );
-  }
-}
-
-class _PackageInfoPlus extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(new MaterialPageRoute(
-            builder: (context) => PackageInfoPlusExample()));
-      },
-      child: Text("package_info_plus"),
-    );
-  }
-}
-
-class _MinorPlugin extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => MinorPluginApp()),
-        );
-      },
-      child: Text('非主流插件'),
     );
   }
 }
