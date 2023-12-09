@@ -26,13 +26,43 @@ class _RxDartExampleState extends State<RxDartExample> {
             Stream.value('a'),
             Stream.fromIterable(['b', 'c', 'd'])
           ],
-              (list) => list.join(),
+          (list) => list.join(),
         ).listen(print);
+      }),
+      _ItemModel("concat", () {
+        Rx.concat([
+          Stream.value(1),
+          Rx.timer(2, Duration(seconds: 5)),
+          Stream.value(3),
+        ]).listen(print);
       }),
       _ItemModel("timer", () {
         Rx.timer("timer_1", Duration(milliseconds: 5000)).listen((event) {
           print(event);
         });
+      }),
+      _ItemModel("repeat", () {
+        Rx.repeat((repeatIndex) {
+          return Stream.value("repateIndex: $repeatIndex");
+        }, 2)
+            .listen((event) {
+          print("event:${event}");
+        });
+      }),
+      _ItemModel("retry", () {
+        var streamSubscription = Rx.retry(() {
+          return Stream.value(1).concatWith([Stream<int>.error(Error())]);
+        }).listen(
+          (event) {
+            print("event: $event");
+          },
+          onError: (error) {
+            print("error: $error");
+          },
+          onDone: () {
+            print("Done");
+          },
+        );
       }),
     ];
   }
